@@ -1,0 +1,3 @@
+Borré los archivos de prueba para crear una branch limpiar a partir del master.
+
+Estoy intentando patear la base de datos del coronavirus con la API de https://about-corona.net/documentation.
