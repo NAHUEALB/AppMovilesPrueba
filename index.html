@@ -1,18 +1,25 @@
+<!-- KEY API NOTICIAS: 41145be57b964f11a90511f640fa2eec -->
+
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
 	<title>Apps Móviles</title>
-	<link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="media/favicon.png" type="image/png">
 	<link rel="icon" href="media/favicon.png" type="image/png">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="jsf/funciones.js"></script>
 </head>
+
+<!-- BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY -->	
 
 <body>	
 <center>
 
-
+	<!-- HEADLINE, DONDE VA EL TÍTULO DE LA PÁGINA Y SU LOGO -->
 	<section>
 		<div class="cabecera"><img src="media/icon_white.png" width="50" height="50">
 			<a style="font-size: 40px">A</a>rge<a style="font-size: 40px">NOTIS</a>
@@ -20,16 +27,27 @@
 	</section>
 
 	
+
+	<!-- REGIÓN MEDIA, DONDE SE ENCUENTRA EL CONTENIDO DE LA PÁGINA -->
 	<section class="cuerpo">
+
+		<!-- PRIMER BLOQUE CON EL TEXTO DE EJEMPLO, ACÁ VAMOS A PONER EL CONTENIDO -->
 		<div class="in-flex">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 		</div>
-		<div class="in-flex">
-			SIDEBAR de onda para probar el responsive
+
+		<!-- SEGUNDO BLOQUE, DONDE AHORA SE ENCUENTRA EL BOTÓN -->
+		<div class="in-flex" style="margin-bottom: 100px;">
+			<div>Formulario:</div>
+
+			<button class="boton-cheto" id="btn-imprimir" onclick="apretarBoton()">Traer noticias</button>
+
+			<div id="resultado"></div>
 		</div>
-		
+
 	</section>
-	
+
+<!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->	
 	
 	<footer>	
 		<div class="titulo-footer">Aplicaciones Móviles - 2020</div>
