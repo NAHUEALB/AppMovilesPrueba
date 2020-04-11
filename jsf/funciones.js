@@ -57,7 +57,10 @@ function apretarBoton() {
 							'<br><a id="una-noticia">Autor: ' + noticias_filtradas[n].author + '</a>' +
 							'<br><a id="una-noticia">Fecha de publicación: ' + (noticias_filtradas[n].publishedAt).slice(0, 10) + '</a>' +
 							'<br><a id="una-noticia" href=' + noticias_filtradas[n].url + ' target="_blank">Link a la noticia</a>' + 
-						'</div>';
+							'<br><button class="boton-cheto" type="button" id="btn-imprimir">Compartir</button>' +
+
+							
+							'</div>';
 					}
 				}
 				else {
@@ -74,6 +77,7 @@ function apretarBoton() {
 						'<br><a id="una-noticia">Autor: ' + noticias[n].author + '</a>' +
 						'<br><a id="una-noticia">Fecha de publicación: ' + (noticias[n].publishedAt).slice(0, 10) + '</a>' +
 						'<br><a id="una-noticia" href=' + noticias[n].url + ' target="_blank">Link a la noticia</a>' + 
+						'<br><button class="boton-cheto" type="button" id="btn-imprimir">Compartir</button>' +
 					'</div>';
 				}
 			}
@@ -89,7 +93,22 @@ function apretarBoton() {
 }
 
 
+	/*
+							var btnabrirPopUp = document.getElementById('btn-abrir-popup'),
+            
+            				overlay = document.getElementById('overlay');
+							popup = document.getElementById('popup');
+							btnCerarrPopUp = document.getElementById('btn-Cerrar-PopUp');
 
+							btnAbrirPopUp.addEventListener('click', function(){
+								overlay.classList.add('active');
+							});
+
+							btnCerrarPopUp.addEventListener('click', function(){
+								overlay.classList.remove('active');
+							});
+
+							*/
 
 
 
