@@ -1,13 +1,13 @@
 function apretarBoton() { 
 
-	var palabra_clave = String(document.getElementById('input-pc').value);
+	var palabras_clave = String(document.getElementById('input-pc').value);
 	var autor = String(document.getElementById('input-autor').value);
 	var divnoticia = document.getElementById('div-para-imprimir');
 	var hubo_resultados = false;
 
 	var url = 'http://newsapi.org/v2/top-headlines?';
-	if (palabra_clave != "") {
-		url += "q=" + palabra_clave + "&";
+	if (palabras_clave != "") {
+		url += "q=" + palabras_clave + "&";
 	}
 	url += "country=ar";
 	url += '&apiKey=41145be57b964f11a90511f640fa2eec';
@@ -21,17 +21,45 @@ function apretarBoton() {
 		var noticias = prueba.articles;
 		var lista_de_noticias = "";
 		if (noticias.length > 0) {
-			hubo_resultados = true;
-			console.log("hay al menos una noticia");
-			for ( var n=0; n<noticias.length; n++){			
-				lista_de_noticias += '<div class="in-flex"><br>Autor: ' + noticias[n].author;
-				lista_de_noticias += '<br>Titulo: ' + noticias[n].title;
-				lista_de_noticias += '<br>Contenido ' + noticias[n].content;
-				lista_de_noticias += '<br>Fecha: ' + noticias[n].publishedAt;
-				lista_de_noticias += '<br>url: <a href=' + noticias[n].url + ' target="_blank">Link a la noticia</a></div>';
+			if (autor != "") {
+				// Creamos un vector de noticias filtradas por autor
+				var noticias_filtradas = [];
+				for (var n=0; n<noticias.length; n++){	
+					console.log(autor);
+					console.log(noticias[n].author);
+					if (noticias[n].author == autor) {
+						noticias_filtradas.push(noticias[n]);
+					}
+				}
+				if (noticias_filtradas.length > 0) {
+					hubo_resultados = true;
+					console.log("hubo resultados jejejeje");
+					for ( var n=0; n<noticias_filtradas.length; n++){			
+						lista_de_noticias += '<div class="in-flex"><br>Autor: ' + noticias_filtradas[n].author;
+						lista_de_noticias += '<br>Titulo: ' + noticias_filtradas[n].title;
+						lista_de_noticias += '<br>Contenido ' + noticias_filtradas[n].content;
+						lista_de_noticias += '<br>Fecha: ' + noticias_filtradas[n].publishedAt;
+						lista_de_noticias += '<br>url: <a href=' + noticias_filtradas[n].url + ' target="_blank">Link a la noticia</a></div>';
+					}
+				}
+				else {
+					console.log("hubo noticias pero no de ese autor");
+				}
+			}
+			else {
+				hubo_resultados = true;
+				console.log("hubo resultados encima sin autor");
+				for ( var n=0; n<noticias.length; n++){			
+					lista_de_noticias += '<div class="in-flex"><br>Autor: ' + noticias[n].author;
+					lista_de_noticias += '<br>Titulo: ' + noticias[n].title;
+					lista_de_noticias += '<br>Contenido ' + noticias[n].content;
+					lista_de_noticias += '<br>Fecha: ' + noticias[n].publishedAt;
+					lista_de_noticias += '<br>url: <a href=' + noticias[n].url + ' target="_blank">Link a la noticia</a></div>';
+				}
 			}
 		}
 		else {
+			console.log("no hubo ni noticias genericas");
 		}
 	if (hubo_resultados) {
 		divnoticia.innerHTML = lista_de_noticias;
