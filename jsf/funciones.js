@@ -93,22 +93,29 @@ function apretarBoton() {
 }
 
 
-	/*
-							var btnabrirPopUp = document.getElementById('btn-abrir-popup'),
-            
-            				overlay = document.getElementById('overlay');
-							popup = document.getElementById('popup');
-							btnCerarrPopUp = document.getElementById('btn-Cerrar-PopUp');
+	function botonCompartir(){
 
-							btnAbrirPopUp.addEventListener('click', function(){
-								overlay.classList.add('active');
-							});
+		var btnabrirPopUp = document.getElementById('btn-abrir-popup');
+        var overlay = document.getElementById('overlay');
+		var popup = document.getElementById('popup');
+		var btnCerarrPopUp = document.getElementById('btn-Cerrar-PopUp');
 
-							btnCerrarPopUp.addEventListener('click', function(){
-								overlay.classList.remove('active');
-							});
+		btnAbrirPopUp.addEventListener('click', function(){
+			overlay.classList.add('active');
+		});
 
-							*/
+		btnCerrarPopUp.addEventListener('click', function(){
+			overlay.classList.remove('active');
+		});
+
+
+
+
+
+	}
+							
+
+							
 
 
 

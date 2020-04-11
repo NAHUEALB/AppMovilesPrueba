@@ -50,7 +50,7 @@ body {
 
 .in-flex div {	
 	padding: 25px;
-	margin: 100px;
+	margin: 20px;
 	background-color: #eee;
 } 
 
@@ -176,10 +176,14 @@ textarea {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	display: flex;
+	visibility: collapse;
 	align-items: center;
 	justify-content: center;
 	position: fixed;
+}
+
+.overlay.active{
+	visibility: visible;
 }
 
 .popup {
