@@ -88,3 +88,119 @@ footer {
 .texto-footer {
 	font-size: 10px;
 }
+
+/* Estilos del formulario popup */
+form {
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0, 0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.form-label {
+    width: 450px;
+    margin: auto;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+	transition: all .2s ease;
+   
+}
+
+#boton:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay {
+	background: rgba(0,0, 0,0.4);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+}
+
+.popup {
+	font-family: 'Franklin Gothic Medium';
+	width: 600px;
+	text-align: center;
+}
+
+
+.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	color: #bbbbbb ;
+	transition: .2s ease all;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: rgba(0,0, 0,0.8);
+}
+
+.popup form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	line-height: 52px;
+	font-size: 18px;
+	text-align: center;
+	border: 1px solid #bbbbbb;
+}
+
+.popup form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: rgba(0,0,0,8);
+	font-family: 'Franklin Gothic Medium';
+	font-size: 16px;
+	cursor: pointer;
+	transition: .2s ease all;
+}
+
+.popup form .btn-submit:hover {
+	background: rgba(0, 0, 0, 0.8);
+}
