@@ -32,9 +32,10 @@
 
 		<div class="in-flex">
 			<form>
-				<label>Titulo:</label> <input type="text" placeholder="Título"> 
-				<label>Autor:</label> <input type="text" placeholder="Autor"> 
+				<label>Palabra clave:</label> <input id="input-pc" type="text" placeholder="Palabras a buscar..." required onclick="return false"> 
+				<label>Autor:</label> <input id="input-autor" type="text" placeholder="Autor..."> 
 				<label>Fecha:</label> <input type="date"> 
+				<button submit class="boton-cheto" type='button' id="btn-imprimir" onclick="apretarBoton()">Traer noticias</button>
 				
 			</form>
 		</div>
@@ -75,13 +76,9 @@
 
 		<!-- SEGUNDO BLOQUE, DONDE AHORA SE ENCUENTRA EL BOTÓN -->
 		<div class= "in-flex" style="margin-bottom: 100px;">
-			
-			<button class="boton-cheto" id="btn-imprimir" onclick="apretarBoton()">Traer noticias</button>
-
-			
-			<div id="noti"></div>
-			<div id="resultado"></div>
-</div>
+						
+			<div id="div-para-imprimir"></div>
+		</div>
 	</section>
 
 <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->	
