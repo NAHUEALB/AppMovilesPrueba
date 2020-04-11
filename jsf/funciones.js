@@ -77,7 +77,7 @@ function apretarBoton() {
 						'<br><a id="una-noticia">Autor: ' + noticias[n].author + '</a>' +
 						'<br><a id="una-noticia">Fecha de publicación: ' + (noticias[n].publishedAt).slice(0, 10) + '</a>' +
 						'<br><a id="una-noticia" href=' + noticias[n].url + ' target="_blank">Link a la noticia</a>' + 
-						'<br><button class="boton-cheto" type="button" id="btn-imprimir">Compartir</button>' +
+						'<br><button class="boton-cheto" type="button" id="btn-imprimir" onclick="botonCompartir()">Compartir</button>' +
 					'</div>';
 				}
 			}
@@ -95,10 +95,10 @@ function apretarBoton() {
 
 	function botonCompartir(){
 
-		var btnabrirPopUp = document.getElementById('btn-abrir-popup');
+		var btnAbrirPopUp = document.getElementById('btn-imprimir');
         var overlay = document.getElementById('overlay');
 		var popup = document.getElementById('popup');
-		var btnCerarrPopUp = document.getElementById('btn-Cerrar-PopUp');
+		var btnCerrarPopUp = document.getElementById('btn-cerrar-popup');
 
 		btnAbrirPopUp.addEventListener('click', function(){
 			overlay.classList.add('active');
