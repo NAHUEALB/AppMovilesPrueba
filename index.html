@@ -29,22 +29,17 @@
 		</div>
 	</section>
 
-
-		<div class="in-flex">
-			<form>
-				<label>Palabra clave:</label> <input id="input-pc" type="text" placeholder="Palabras a buscar..." required onclick="return false"> 
-				<label>Autor:</label> <input id="input-autor" type="text" placeholder="Autor..."> 
-				<label>Fecha:</label> <input id="input-date" type="date"> 
-				<button submit class="boton-cheto" type='button' id="btn-imprimir" onclick="apretarBoton()">Traer noticias</button>
-				
-			</form>
-		</div>
-
+	<form class="in-flex" id="formulario">
+		<label class="form-label">Palabras clave:</label> <input id="input-pc" type="text" placeholder="Palabras a buscar..." required onclick="return false"> 
+		<label class="form-label">Autor:</label> <input id="input-autor" type="text" placeholder="Autor..."> 
+		<label class="form-label">Fecha:</label> <input id="input-date" type="date"> 
+		<button submit class="boton-cheto" type='button' id="btn-imprimir" onclick="apretarBoton()">Buscar noticias</button>
+	</form>
 
 	
 
 	<!-- REGIÓN MEDIA, DONDE SE ENCUENTRA EL CONTENIDO DE LA PÁGINA -->
-	<section class="cuerpo">
+	<section class="cuerpo" class="in-flex" id="div-para-imprimir">
 
 		<!-- PRIMER BLOQUE CON EL TEXTO DE EJEMPLO, ACÁ VAMOS A PONER EL CONTENIDO -->
 
@@ -73,12 +68,10 @@
 			</div>
 		</div>
 -->
-
+		
 		<!-- SEGUNDO BLOQUE, DONDE AHORA SE ENCUENTRA EL BOTÓN -->
-		<div class= "in-flex" style="margin-bottom: 100px;">
-						
-			<div id="div-para-imprimir"></div>
-		</div>
+		
+
 	</section>
 
 <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->	

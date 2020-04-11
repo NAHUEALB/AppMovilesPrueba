@@ -3,7 +3,7 @@ function apretarBoton() {
 	var palabras_clave = String(document.getElementById('input-pc').value);
 	var autor = String(document.getElementById('input-autor').value);
 	var fecha = String(document.getElementById('input-date').value);
-	var divnoticia = document.getElementById('div-para-imprimir');
+	var nuevo_divnoticia = document.getElementById('div-para-imprimir');
 	var hubo_resultados = false;
 
 	var url = 'http://newsapi.org/v2/top-headlines?';
@@ -51,11 +51,13 @@ function apretarBoton() {
 					hubo_resultados = true;
 					console.log("hubo resultados con alguno o ambos filtros jejejeje");
 					for ( var n=0; n<noticias_filtradas.length; n++){			
-						lista_de_noticias += '<div class="in-flex"><br>Autor: ' + noticias_filtradas[n].author;
-						lista_de_noticias += '<br>Titulo: ' + noticias_filtradas[n].title;
-						lista_de_noticias += '<br>Contenido ' + noticias_filtradas[n].content;
-						lista_de_noticias += '<br>Fecha: ' + (noticias_filtradas[n].publishedAt).slice(0, 10);
-						lista_de_noticias += '<br>url: <a href=' + noticias_filtradas[n].url + ' target="_blank">Link a la noticia</a></div>';
+						lista_de_noticias += '<div class="in-flex" id="una-noticia">' +
+							'<br><img src="' + noticias[n].urlToImage + '" height="190" width="280"><hr />' +
+							'<br><a id="titulo-noticia" href='+ noticias_filtradas[n].url +' target="_blank">'+noticias[n].title+'</a>'+
+							'<br><a id="una-noticia">Autor: ' + noticias_filtradas[n].author + '</a>' +
+							'<br><a id="una-noticia">Fecha de publicación: ' + (noticias_filtradas[n].publishedAt).slice(0, 10) + '</a>' +
+							'<br><a id="una-noticia" href=' + noticias_filtradas[n].url + ' target="_blank">Link a la noticia</a>' + 
+						'</div>';
 					}
 				}
 				else {
@@ -65,24 +67,23 @@ function apretarBoton() {
 			else {
 				hubo_resultados = true;
 				console.log("como no hubo filtros traemos todo");
-				for ( var n=0; n<noticias.length; n++){			
-					lista_de_noticias += '<div class="in-flex"><br>Autor: ' + noticias[n].author;
-					lista_de_noticias += '<br>Titulo: ' + noticias[n].title;
-					lista_de_noticias += '<br>Contenido ' + noticias[n].content;
-					lista_de_noticias += '<br>Fecha: ' + (noticias[n].publishedAt).slice(0, 10);
-					lista_de_noticias += '<br>url: <a href=' + noticias[n].url + ' target="_blank">Link a la noticia</a></div>';
+				for ( var n=0; n<noticias.length; n++){		
+					lista_de_noticias += '<div class="in-flex" id="una-noticia">' +
+						'<br><img src="' + noticias[n].urlToImage + '" height="160" width="280"><hr />' +
+						'<br><a id="titulo-noticia" href='+ noticias[n].url +' target="_blank">'+noticias[n].title+'</a>'+
+						'<br><a id="una-noticia">Autor: ' + noticias[n].author + '</a>' +
+						'<br><a id="una-noticia">Fecha de publicación: ' + (noticias[n].publishedAt).slice(0, 10) + '</a>' +
+						'<br><a id="una-noticia" href=' + noticias[n].url + ' target="_blank">Link a la noticia</a>' + 
+					'</div>';
 				}
 			}
 		}
-		else {
-			console.log("no hubo ni noticias");
+		if (hubo_resultados) {
+			nuevo_divnoticia.innerHTML = lista_de_noticias;
 		}
-	if (hubo_resultados) {
-		divnoticia.innerHTML = lista_de_noticias;
-	}
-	else {
-		divnoticia.innerHTML = '<div class="in-flex">La búsqueda no arrojó resultados</div>';
-	}
+		else {
+			nuevo_divnoticia.innerHTML = '<div class="in-flex">La búsqueda no arrojó resultados</div>';
+		}
 	
 	});
 }
