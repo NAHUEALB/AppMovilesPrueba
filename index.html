@@ -14,6 +14,7 @@
 
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="jsf/funciones.js"></script>
+	<script type="text/javascript" src="jsf/popup.js"></script>
 </head>
 
 <!-- BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY -->	
@@ -43,16 +44,11 @@
 		
 		
 		<!-- PRIMER BLOQUE CON EL TEXTO DE EJEMPLO, ACÁ VAMOS A PONER EL CONTENIDO -->
-		<div class="in-flex">
-
-		
-
-		
-		
-		
+		<div class="contenedor">
 			<div class="overlay" id='overlay'>
 				<div class="popup" id='popup'>
-					<a href="#" id="btn-cerrar-popup" class="btn-cerar-popup"></a><i class="fas fa-times"></i></a>
+					<!--<button class="boton-cheto" type="button" id="btn-cerrar-popup" onclick="botonCompartir()">X</button>-->
+					<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
 					<form action="enviarform.php" method="post" class="form_contact">
 						<div class="contenedor-inputs">
 							<h1>Comparte con un amigo</h1>
@@ -91,6 +87,8 @@
 
 
 </center>
+
+
 </body>
 
 </html>

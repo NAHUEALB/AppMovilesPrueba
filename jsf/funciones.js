@@ -1,3 +1,4 @@
+
 function apretarBoton() { 
 
 	var palabras_clave = String(document.getElementById('input-pc').value);
@@ -57,7 +58,7 @@ function apretarBoton() {
 							'<br><a id="una-noticia">Autor: ' + noticias_filtradas[n].author + '</a>' +
 							'<br><a id="una-noticia">Fecha de publicación: ' + (noticias_filtradas[n].publishedAt).slice(0, 10) + '</a>' +
 							'<br><a id="una-noticia" href=' + noticias_filtradas[n].url + ' target="_blank">Link a la noticia</a>' + 
-							'<br><button class="boton-cheto" type="button" id="btn-imprimir">Compartir</button>' +
+							'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup">Compartir</button>' +
 
 							
 							'</div>';
@@ -77,7 +78,7 @@ function apretarBoton() {
 						'<br><a id="una-noticia">Autor: ' + noticias[n].author + '</a>' +
 						'<br><a id="una-noticia">Fecha de publicación: ' + (noticias[n].publishedAt).slice(0, 10) + '</a>' +
 						'<br><a id="una-noticia" href=' + noticias[n].url + ' target="_blank">Link a la noticia</a>' + 
-						'<br><button class="boton-cheto" type="button" id="btn-imprimir" onclick="botonCompartir()">Compartir</button>' +
+						'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup">Compartir</button>' +
 					'</div>';
 				}
 			}
@@ -93,27 +94,7 @@ function apretarBoton() {
 }
 
 
-	function botonCompartir(){
-
-		var btnAbrirPopUp = document.getElementById('btn-imprimir');
-        var overlay = document.getElementById('overlay');
-		var popup = document.getElementById('popup');
-		var btnCerrarPopUp = document.getElementById('btn-cerrar-popup');
-
-		btnAbrirPopUp.addEventListener('click', function(){
-			overlay.classList.add('active');
-		});
-
-		btnCerrarPopUp.addEventListener('click', function(){
-			overlay.classList.remove('active');
-		});
-
-
-
-
-
-	}
-							
+				
 
 							
 
