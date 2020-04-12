@@ -58,7 +58,7 @@ function apretarBoton() {
 							'<br><a id="una-noticia">Autor: ' + noticias_filtradas[n].author + '</a>' +
 							'<br><a id="una-noticia">Fecha de publicación: ' + (noticias_filtradas[n].publishedAt).slice(0, 10) + '</a>' +
 							'<br><a id="una-noticia" href=' + noticias_filtradas[n].url + ' target="_blank">Link a la noticia</a>' + 
-							'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup">Compartir</button>' +
+							'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup" onclick="showModal()">Compartir</button>' +
 
 							
 							'</div>';
@@ -78,7 +78,7 @@ function apretarBoton() {
 						'<br><a id="una-noticia">Autor: ' + noticias[n].author + '</a>' +
 						'<br><a id="una-noticia">Fecha de publicación: ' + (noticias[n].publishedAt).slice(0, 10) + '</a>' +
 						'<br><a id="una-noticia" href=' + noticias[n].url + ' target="_blank">Link a la noticia</a>' + 
-						'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup">Compartir</button>' +
+						'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup" onclick="showModal()">Compartir</button>' +
 					'</div>';
 				}
 			}
