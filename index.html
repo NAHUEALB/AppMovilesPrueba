@@ -51,19 +51,23 @@
 	<div>
 			<a href="#close" title="Close" class="close" onclick="CloseModal()">X</a>
 			<form action="enviarform.php" method="post" class="form_contact">
-					<h1>Comparte con un amigo</h1>
-					<label for="nombre" class="form-label">Nombre</label>
+				<div class="compartir">
+					<a style="font-size: 30px">Comparte con un amigo</a>
+					<img src="media/email-icon.png" width="30" height="30">
+				</div>
+					
+					<label for="nombre" class="form-label">Nombre:</label>
 					<input type="text" name="nombreApellido" placeholder="Nombre y Apellido" required>
 
-					<label for="nombre" class="form-label">Correo Emisor</label>
+					<label for="nombre" class="form-label">Correo Emisor:</label>
 					<input type="text" name="correo_emisor" placeholder="Correo emisor" required>
 
-					<label for="nombre" class="form-label">Correo Receptor</label>
+					<label for="nombre" class="form-label">Correo Receptor:</label>
 					<input type="text" name="correo_receptor" placeholder="Correo receptor" required>
 
-					<label for="nombre" class="form-label">Mensaje</label>
+					<label for="nombre" class="form-label">Mensaje:</label>
 					<textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-				<input type="submit" class="btn-submit" value="ENVIAR" id="boton">
+					<input type="submit" class="btn-submit" value="ENVIAR" id="boton">
 			</form>
 	</div>
 </div>	
