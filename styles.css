@@ -38,7 +38,7 @@ body {
 .in-flex {
 	flex: 1;
 	min-width: 300px;
-	max-width: 320px;	
+	width: 300px;	
 	background-color: #fff;
 	border-radius: 0px 0px 10px 10px;
 }
@@ -172,7 +172,7 @@ textarea {
 #boton:hover {
     background: rgba(0, 0, 0, 0.8);
 }
-
+/*
 .overlay {
 	background: rgba(0,0,0,.3);
 	position: fixed;
@@ -302,7 +302,7 @@ textarea {
 .contenedor article .btn-abrir-popup:hover {
 	background: rgba(94,125,227, .9);
 }
-
+*/
 
 .modalDialog {
 	position: fixed;
@@ -354,7 +354,7 @@ transition: opacity 400ms ease-in;
 .close:hover { background: #00d9ff; }
 
 #map {
-	height: 500px;
+	height: 350px;
 	width: 100%;
 }
 
