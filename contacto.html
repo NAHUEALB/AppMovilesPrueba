@@ -1,0 +1,61 @@
+<!--Api key google map: AIzaSyAVxpl3G3XRQJLsGNczgIUrQAgvB4xTZAY -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maps</title>
+    <link rel="shortcut icon" href="media/favicon.png" type="image/png">
+	<link rel="icon" href="media/favicon.png" type="image/png">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f0c5136858.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    
+</head>
+
+<body>
+
+    <section>
+		<div class="cabecera">
+			<img src="media/icon_white.png" width="50" height="50">
+			<a style="font-size: 40px">A</a>rge<a style="font-size: 40px">NOTIS</a>
+		</div>
+    </section>
+
+   
+<center>
+<div class="in-flex">
+    <div class="in-flex" id="div-contacto">
+            Bienvenidos al portal de argeNOTIS. Somos un grupo de desarrolladores muy preocupados en mejorara la calidad la información que circula a traves de internet y somos fundamentalistas de no promocionar las fake news.
+            <br>
+            Nuestro equipo lleva años experiencia e inversión en este campo tan fundamental para colaborar con un periodismo mas sincero y menos amarillista, muy necesario en las circunstancias de la sociedad actual
+            <br>
+           
+    </div>
+    <div id="div-contacto" class="in-flex">
+        Para mas información puede acercarse a nuestras oficinas en la Catedral de La Plata.
+
+        <div id="map"></div>
+
+    </div>
+
+</div>
+</center>
+<!-- Sidebar-->
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+
+<div class="sidebar">
+    <header>My menu</header>
+
+    <a href="index.html"><i class="fas fa-search"></i><span>Buscar</span></a>
+    <a href="contacto.html"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
+</div>
+<script src="jsf/mapa.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVxpl3G3XRQJLsGNczgIUrQAgvB4xTZAY&callback=iniciarMap"></script>
+
+</body>
+
+</html>

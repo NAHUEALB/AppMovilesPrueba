@@ -1,3 +1,4 @@
+
 * {
 	padding: 0px;
 	margin: 0px;
@@ -32,14 +33,15 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 90px;
+
 }
 
 .in-flex {
 	flex: 1;
 	min-width: 300px;
-	max-width: 320px;	
-	background-color: #fff;
+	width: 85%;	
 	border-radius: 0px 0px 10px 10px;
+	text-align: center;
 }
 
 .in-flex:noticia {
@@ -51,12 +53,18 @@ body {
 .in-flex div {	
 	padding: 25px;
 	margin: 20px;
-	background-color: #eee;
 } 
+.in-flex form{
+	opacity: 0.3;
+	background-color: #777;
+
+}
+
 
 #una-noticia {
-	margin: 20px 10px 10px 10px;
+	margin: 15px 10px 10px 10px;
 	font-size: 13px;
+	background-color: #ddf;
 
 }
 
@@ -108,32 +116,31 @@ footer {
 	font-size: 10px;
 }
 
-/* Estilos del formulario popup */
 
+
+/* Estilos del formulario de búsqueda */
 
 form {
+<<<<<<< HEAD
     margin: auto;
     background: rgba(0, 0, 0, 0.4);
+=======
+    background: rgba(0,0, 0,0.4);
+>>>>>>> mapa
     padding: 10px 20px;
     box-sizing: border-box;
-    margin-top: 20px;
-    border-radius: 7px;
-}
-
-#formulario {
-	width: 300px;
 }
 
 .form-label {
-    width: 300px;
     padding-bottom: 15px;
     color: #000;
     font-size: 20px;
     font-family: 'Calibri';
+    width: 85%;
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     color: #fff;
     font-size: 40px;
     background: rgba(0, 0, 0, 0.4);
@@ -141,24 +148,36 @@ h1 {
 }
 
 input, textarea {
-    width: 100%;
+	
     margin: 5px 0px 15px 0px;
     padding: 7px;
     box-sizing: border-box;
     font-size: 17px;
     border: none;
     border: 1px solid grey;
-  	border-radius: 10px;
+	border-radius: 10px;
+	width: 85%;
+	min-width: 250px;
+	max-width: 367px;
 }
 
 textarea {
     min-height: 100px;
     max-height: 200px;
-	max-width: 100%
+<<<<<<< HEAD
 	
+=======
+    
+>>>>>>> mapa
 }
 
-#boton {
+
+
+
+
+/* Diseño del Modal */
+
+#boton-modal {
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
     padding: 20px;
@@ -169,140 +188,9 @@ textarea {
    
 }
 
-#boton:hover {
+#boton-modal:hover {
     background: rgba(0, 0, 0, 0.8);
 }
-
-.overlay {
-	background: rgba(0,0,0,.3);
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	visibility: hidden;
-}
-
-.overlay.active {
-	visibility: visible;
-}
-
-.popup {
-	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
-	padding: 20px;
-	text-align: center;
-	width: 600px;
-	
-	transition: .3s ease all;
-	transform: scale(0.7);
-	opacity: 0;
-}
-
-.popup .btn-cerrar-popup {
-	font-size: 16px;
-	line-height: 16px;
-	display: block;
-	text-align: right;
-	transition: .3s ease all;
-	color: #BBBBBB;
-}
-
-.popup .btn-cerrar-popup:hover {
-	color: #000;
-}
-
-.popup h3 {
-	font-size: 36px;
-	font-weight: 600;
-	margin-bottom: 10px;
-	opacity: 0;
-}
-
-.popup h4 {
-	font-size: 26px;
-	font-weight: 300;
-	margin-bottom: 40px;
-	opacity: 0;
-}
-
-.popup form .contenedor-inputs {
-	opacity: 0;
-}
-
-.popup form .contenedor-inputs input {
-	width: 100%;
-	margin-bottom: 20px;
-	height: 52px;
-	font-size: 18px;
-	line-height: 52px;
-	text-align: center;
-	border: 1px solid #BBBBBB;
-}
-
-.popup form .btn-submit {
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #fff;
-	background: #5E7DE3;
-	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
-}
-
-.popup form .btn-submit:hover {
-	background: rgba(94,125,227, .9);
-}
-
-.contenedor {
-	width: 90%;
-	max-width: 1000px;
-	margin: 20px auto;
-}
-
-.contenedor article {
-	line-height: 28px;
-}
-
-.contenedor article h1 {
-	font-size: 30px;
-	text-align: left;
-	padding: 50px 0;
-}
-
-.contenedor article p {
-	margin-bottom: 20px;
-}
-
-.contenedor article .btn-abrir-popup {
-	padding: 0 20px;
-	margin-bottom: 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #fff;
-	background: #5E7DE3;
-	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
-	cursor: pointer;
-}
-
-.contenedor article .btn-abrir-popup:hover {
-	background: rgba(94,125,227, .9);
-}
-
 
 .modalDialog {
 	position: fixed;
@@ -323,7 +211,11 @@ textarea {
 .modalDialog div {
 	width: 400px;
 	position: relative;
+<<<<<<< HEAD
 	margin: 5% auto;
+=======
+	margin: 2% auto;
+>>>>>>> mapa
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
 	background: rgba(0,0,0, .9);
@@ -403,5 +295,22 @@ textarea {
 
 
 
+#map {
+	height: 350px;
+	padding: 0px;
+	margin: 0px;
+	flex: 1;
+	min-width: 300px;
+	width: 100%;
+		
 
+}
 
+#div-contacto{
+	min-width: 300px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 10px;
+
+	margin-top: 20px;
+}
