@@ -11,6 +11,7 @@
 	height: 100%;
 	background: #1e1e1e;
 	transition: all .5s ease;
+	top: 0px;
 }
 
 .sidebar header {
@@ -71,6 +72,7 @@ label #btn, label #cancel{
 	margin: 15px 30px;
 	border: 1px solid #262626;
 	transition: all .5s ease;
+	top: 0px;
 
 }
 

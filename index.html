@@ -9,6 +9,8 @@
 	<link rel="icon" href="media/favicon.png" type="image/png">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/f0c5136858.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="jsf/funciones.js"></script>
 	<script type="text/javascript" src="jsf/popup.js"></script>
 
@@ -17,7 +19,7 @@
 <!-- BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY -->	
 
 <body>	
-<center>
+
 
 	<!-- HEADLINE, DONDE VA EL TÍTULO DE LA PÁGINA Y SU LOGO -->
 	<section>
@@ -27,10 +29,27 @@
 		</div>
 	</section>
 
-	<form class="in-flex" id="formulario">
-		<label class="form-label">Palabras clave:</label> <input id="input-pc" type="text" placeholder="Palabras a buscar..." required onclick="return false"> 
-		<label class="form-label">Autor:</label> <input id="input-autor" type="text" placeholder="Autor..."> 
-		<label class="form-label">Fecha:</label> <input id="input-date" type="date"> 
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+
+    <div class="sidebar">
+        <header>My menu</header>
+    
+        <a href="index.html"><i class="fas fa-search"></i><span>Buscar</span></a>
+        <a href="contacto.html"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
+	</div>
+	
+<center>
+	<form>
+		<div class="in-flex" class="cuerpo">
+			<input type="text" id="input-pc" placeholder="¿Qué desea buscar hoy?" required onclick="return false">
+			<input type="text" id="input-autor" placeholder="¿Algún autor en particular?">
+			<input type="date" id="input-date" > 
+		</div>
 		<button submit class="boton-cheto" type='button' id="btn-imprimir" onclick="apretarBoton()">Buscar noticias</button>
 	</form>
 
@@ -60,7 +79,7 @@
 
 					<label for="nombre" class="form-label">Mensaje</label>
 					<textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-				<input type="submit" class="btn-submit" value="ENVIAR" id="boton">
+				<input type="submit" class="btn-submit" value="ENVIAR" id="boton-modal">
 			</form>
 	</div>
 </div>	
