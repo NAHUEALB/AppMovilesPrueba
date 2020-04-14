@@ -121,12 +121,7 @@ footer {
 /* Estilos del formulario de búsqueda */
 
 form {
-<<<<<<< HEAD
-    margin: auto;
-    background: rgba(0, 0, 0, 0.4);
-=======
     background: rgba(0,0, 0,0.4);
->>>>>>> mapa
     padding: 10px 20px;
     box-sizing: border-box;
 }
@@ -164,11 +159,7 @@ input, textarea {
 textarea {
     min-height: 100px;
     max-height: 200px;
-<<<<<<< HEAD
-	
-=======
     
->>>>>>> mapa
 }
 
 
@@ -211,11 +202,7 @@ textarea {
 .modalDialog div {
 	width: 400px;
 	position: relative;
-<<<<<<< HEAD
-	margin: 5% auto;
-=======
 	margin: 2% auto;
->>>>>>> mapa
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
 	background: rgba(0,0,0, .9);
