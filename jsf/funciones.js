@@ -6,7 +6,10 @@ function apretarBoton() {
 	var fecha = String(document.getElementById('input-date').value);
 	var nuevo_divnoticia = document.getElementById('div-para-imprimir');
 	var hubo_resultados = false;
+	//Le paso como parametros el contenido de los input
+	save_localstorage(autor,palabras_clave);
 
+	
 	var url = 'http://newsapi.org/v2/top-headlines?';
 	if (palabras_clave != "") {
 		url += "q=" + palabras_clave + "&";
@@ -62,10 +65,12 @@ function apretarBoton() {
 
 							
 							'</div>';
+
 					}
 				}
 				else {
 					console.log("de tanto filtro dejamos cero");
+
 				}
 			}			
 			else {
@@ -80,6 +85,7 @@ function apretarBoton() {
 						'<br><a id="una-noticia" href=' + noticias[n].url + ' target="_blank">Link a la noticia</a>' + 
 						'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup" onclick="showModal()">Compartir</button>' +
 					'</div>';
+
 				}
 			}
 		}
@@ -92,39 +98,3 @@ function apretarBoton() {
 	
 	});
 }
-
-
-				
-
-							
-
-
-
-/* 
-		var res = response.json();
-		console.log(res);
-		document.getElementById("resultado").textContent = response;
-
-
-
-	fetch('https://www.hatchways.io/api/assessment/students')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    var divOut = document.getElementById('txtOut');
-    var allStudents = myJson.students;
-    var txtOut = "";
-    for (var k in allStudents) {
-      txtOut += `<b>${allStudents[k].firstName}</b><br />`;
-      txtOut += `email: ${allStudents[k].email}<br />`;
-      txtOut += `Company: ${allStudents[k].company}<br />`;
-      txtOut += `Skill: ${allStudents[k].skill}<br />`;
-      txtOut += `Average: ${allStudents[k].grades}<br />`;
-      txtOut += `<img src="${allStudents[k].pic}"><hr />`;
-    }
-    divOut.innerHTML = txtOut;
-  });
-	
-
-*/
