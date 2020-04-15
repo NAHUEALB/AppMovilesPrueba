@@ -48,7 +48,7 @@ function addLocalStorage(SList){
         for( let i=0; i < searchList.length; i++ ){
             console.log(listSearch);
             
-        contenido += '<button class="in-flex">'+ searchList[i].palabra_clave  +'</button>'; 
+        contenido += '<button class="in-flex" id="boton-'+i+'" onclick="get_Value('+i+')">'+ searchList[i].palabra_clave  +'</button>'; 
         }
         tendencias.innerHTML = contenido;
 
@@ -56,4 +56,14 @@ function addLocalStorage(SList){
 
 
 
+ }
+
+ //Retorno el valor del boton a los input
+ function get_Value(index){
+    console.log(index);
+
+
+    document.getElementById('input-pc').value = searchList[index].palabra_clave;
+
+   // apretarBoton();
  }
