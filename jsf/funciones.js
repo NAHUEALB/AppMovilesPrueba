@@ -7,7 +7,7 @@ function apretarBoton() {
 	var nuevo_divnoticia = document.getElementById('div-para-imprimir');
 	var hubo_resultados = false;
 	//Le paso como parametros el contenido de los input
-	save_localStorage(autor,palabras_clave);
+	save_localStorage(autor,palabras_clave,fecha);
 
 	
 	var url = 'http://newsapi.org/v2/top-headlines?';

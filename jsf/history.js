@@ -1,16 +1,18 @@
 var searchList = [];
 
 
-function save_localStorage(author,word){
+function save_localStorage(author,word,date){
 
-    console.log(author,word);
+    
+    console.log(author,word,date);
     //Meto en la lista search los valores de author y word en la lista
     //Creo el elemento de la lista
     var search = {
         palabra_clave: word,
         autor: author,
+        fecha: date
     };
-
+    
     //Lo gestiono tipo FILA
     if( searchList.length == 5){
         //Elimino el primero en llegar
@@ -45,10 +47,11 @@ function addLocalStorage(SList){
      else{
         searchList = JSON.parse(listSearch);
         var contenido = "";
+        console.log(searchList[0].fecha);
         for( let i=0; i < searchList.length; i++ ){
             console.log(listSearch);
             
-        contenido += '<button class="in-flex" id="boton-'+i+'" onclick="get_Value('+i+')">'+ searchList[i].palabra_clave  +'</button>'; 
+        contenido += '<a id="boton-'+i+'" onclick="get_Value('+i+')"><span>'+ searchList[i].palabra_clave  +'<br>'+searchList[i].autor+'</span></a>'; 
         }
         tendencias.innerHTML = contenido;
 
@@ -64,6 +67,9 @@ function addLocalStorage(SList){
 
 
     document.getElementById('input-pc').value = searchList[index].palabra_clave;
+    document.getElementById('input-autor').value = searchList[index].autor;
+    document.getElementById('input-date').value = searchList[index].fecha;
+
 
    // apretarBoton();
  }
