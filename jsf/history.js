@@ -39,7 +39,6 @@ function addLocalStorage(SList){
  function get_localStorage(){
     var tendencias = document.getElementById('prueba-tendendencias');
     var listSearch = localStorage.getItem('Lista de Busquedas');
-    var segundo = document.getElementById('segunda-busqueda')
     console.log(listSearch);
      if ( listSearch == null ){
         tendencias.innerHTML = '<div class="in-flex">No busco nada recientemente</div>'
