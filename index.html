@@ -13,6 +13,8 @@
     <script src="https://kit.fontawesome.com/f0c5136858.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="jsf/funciones.js"></script>
 	<script type="text/javascript" src="jsf/popup.js"></script>
+	<!-- JS con la gestion de LocalStorage-->
+	<script type="text/javascript" src="jsf/history.js"></script>
 
 </head>
 
@@ -25,7 +27,7 @@
 	<section>
 		<div class="cabecera">
 			<img src="media/icon_white.png" width="50" height="50">
-			<a style="font-size: 40px">A</a>rge<a style="font-size: 40px">NOTIS</a>
+			<a style="font-size: 40px" >A</a>rge<a style="font-size: 40px">NOTIS</a>
 		</div>
 	</section>
 
@@ -37,10 +39,18 @@
     </label>
 
     <div class="sidebar">
-        <header>My menu</header>
+        <header>MENU</header>
     
         <a href="index.html"><i class="fas fa-search"></i><span>Buscar</span></a>
-        <a href="contacto.html"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
+		<a href="contacto.html"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
+		</br>
+
+		<header>TOP</header>
+		<div id="prueba-tendendencias">
+
+		</div>
+	
+		
 	</div>
 	
 <center>
@@ -53,22 +63,16 @@
 		<button submit class="boton-cheto" type='button' id="btn-imprimir" onclick="apretarBoton()">Buscar noticias</button>
 	</form>
 
-<!--		<div id="openModal" class="modalDialog">
-		  <div>
-			<a href="#close" title="Close" class="close" onclick="CloseModal()">X</a>
-			<h2>Mi modal</h2>
-			<p>Este es un ejemplo de modal, creado gracias al poder de CSS3.</p>
-			<p>Puedes hacer un montón de cosas aquí, como alertas o incluso crear un formulario de registro aquí mismo.</p>
-		  </div>
-		</div>
--->
+
+
+
 <!-- Formulario de Comparte Información con un amigo-->
 <div id="openModal" class="modalDialog">	
 	<div>
 			<a href="#close" title="Close" class="close" onclick="CloseModal()">X</a>
 			<form action="enviarform.php" method="post" class="form_contact">
 				<div class="compartir">
-					<a style="font-size: 30px">Comparte con un amigo</a>
+					<p style="font-size: 30px">Comparte con un amigo</p>
 					<img src="media/email-icon.png" width="30" height="30">
 				</div>
 					

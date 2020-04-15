@@ -6,7 +6,10 @@ function apretarBoton() {
 	var fecha = String(document.getElementById('input-date').value);
 	var nuevo_divnoticia = document.getElementById('div-para-imprimir');
 	var hubo_resultados = false;
+	//Le paso como parametros el contenido de los input
+	save_localStorage(autor,palabras_clave,fecha);
 
+	
 	var url = 'http://newsapi.org/v2/top-headlines?';
 	if (palabras_clave != "") {
 		url += "q=" + palabras_clave + "&";
@@ -64,10 +67,12 @@ function apretarBoton() {
 
 							
 							'</div>';
+
 					}
 				}
 				else {
 					console.log("de tanto filtro dejamos cero");
+
 				}
 			}			
 			else {
@@ -82,6 +87,7 @@ function apretarBoton() {
 						'<br><a id="una-noticia" href=' + noticias[n].url + ' target="_blank">Link a la noticia</a>' + 
 						'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup" onclick="showModal()">Compartir</button>' +
 					'</div>';
+
 				}
 			}
 		}
