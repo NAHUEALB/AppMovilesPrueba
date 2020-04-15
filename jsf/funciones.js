@@ -32,18 +32,20 @@ function apretarBoton() {
 		var noticias = prueba.articles;
 		var lista_de_noticias = "";
 		if (noticias.length > 0) {
-			if (autor != "" || fecha != "") {
+			if ((autor != "" && autor != null) || fecha != "") {
 				// Creamos un vector de noticias filtradas por autor
 				var noticias_filtradas = [];
 				for (var n=0; n<noticias.length; n++){
-					if (autor != "" && noticias[n].author == autor && fecha == "") {
+					console.log(noticias[n].author);
+					console.log(String(noticias[n].author));
+					if (autor != "" && ((String(noticias[n].author)).toLowerCase()).includes(autor.toLowerCase()) && fecha == "") {
 						noticias_filtradas.push(noticias[n]);
 					}
 					else if (fecha != "" && (noticias[n].publishedAt).slice(0, 10) >= fecha && autor == "") {
 						noticias_filtradas.push(noticias[n]);
 					}
 					else {
-						if (noticias[n].author == autor && (noticias[n].publishedAt).slice(0, 10) >= fecha) {
+						if (((String(noticias[n].author)).toLowerCase()).includes(autor.toLowerCase()) && (noticias[n].publishedAt).slice(0, 10) >= fecha) {
 							noticias_filtradas.push(noticias[n]);
 						}
 					}
