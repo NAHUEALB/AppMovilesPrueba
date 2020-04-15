@@ -13,16 +13,40 @@ function save_localStorage(author,word,date){
         fecha: date
     };
     
+//Agregar condicion para saber si existe o no
+
     //Lo gestiono tipo FILA
+    console.log(searchList.length);
+    
     if( searchList.length == 5){
+        var iterar = searchList.length ;
+        var repitio = false;
+        console.log(repitio);
+        if(iterar > 5){
+            iterar = 5
+        }
+        for (i=0; i<4; i++){
+            if(JSON.stringify(search) == JSON.stringify(searchList[i]) || repitio){
+                searchList[i] = searchList[i+1];
+                
+                repitio = true;
+                console.log(repitio);
+
+            }
+
+        }
+        if(repitio == false){
         //Elimino el primero en llegar
         searchList.pop();
+
+        }
+
     }
-    
     searchList.unshift(search);
     addLocalStorage(searchList);
 
-    get_localStorage();
+    get_localStorage();       
+
     
     }
 

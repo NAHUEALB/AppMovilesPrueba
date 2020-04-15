@@ -63,14 +63,22 @@
 
 <!-- Formulario de Comparte Información con un amigo-->
 <div id="openModal" class="modalDialog">	
-	<div>
+	<div class="in-flex" class="cuerpo">
 			<a href="#close" title="Close" class="close" onclick="CloseModal()">X</a>
 			<form action="enviarform.php" method="post" class="form_contact">
-				<div class="compartir">
-					<p style="font-size: 30px">Comparte con un amigo</p>
+				
+					<a style="font-size: 30px">COMPARTIR</a>
 					<img src="media/email-icon.png" width="30" height="30">
-				</div>
+				
 					
+					<input type="text" id="input-nombre" placeholder="Nombre y Apellido" >
+					<input type="text" id="input-correo emisor" placeholder="Correo emisor">
+					<input type="text" id="input-correo recepetor" placeholder="Correo receptor" > 
+					<textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+					<button submit class="boton-cheto" type="button" onclick="enviarModal()" >ENVIAR</button>
+
+
+					<!--
 					<label for="nombre" class="form-label">Nombre:</label>
 					<input type="text" name="nombreApellido" placeholder="Nombre y Apellido" required>
 
@@ -82,8 +90,9 @@
 
 					<label for="nombre" class="form-label">Mensaje:</label>
 					<textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-				<input type="submit" class="btn-submit" value="ENVIAR" id="boton-modal">
-			</form>
+					<input type="submit" class="btn-submit" value="ENVIAR" id="boton-modal">
+					-->
+				</form>
 	</div>
 </div>	
 
