@@ -50,7 +50,7 @@ function addLocalStorage(SList){
         for( let i=0; i < searchList.length; i++ ){
             console.log(listSearch);
             
-        contenido += '<a id="boton-'+i+'" onclick="get_Value('+i+')"><span>'+ searchList[i].palabra_clave  +'<br>'+searchList[i].autor+'</span></a>'; 
+        contenido += '<a id="elemento-sidebar" onclick="get_Value('+i+')"><span>'+ searchList[i].palabra_clave  +'<br>'+searchList[i].autor+'</span></a>'; 
         }
         tendencias.innerHTML = contenido;
 
