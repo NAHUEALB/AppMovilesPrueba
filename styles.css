@@ -55,9 +55,9 @@ body {
 	margin: 20px;
 } 
 .in-flex form{
-	opacity: 0.3;
+	/*opacity: 0.3;
 	background-color: #777;
-
+*/
 }
 
 
@@ -121,8 +121,8 @@ footer {
 /* Estilos del formulario de búsqueda */
 
 form {
-    background: rgba(0,0, 0,0.4);
-    padding: 10px 20px;
+	/*background: rgba(0,0, 0,0.4);*/
+    padding: 5px 10px;
     box-sizing: border-box;
 }
 
@@ -214,7 +214,7 @@ textarea {
 	transition: opacity 400ms ease-in;
 }
 .close {
-	background: #666;
+	background: grey;
 	color: #FFFFFF;
 	line-height: 25px;
 	position: absolute;
@@ -300,4 +300,36 @@ textarea {
 	border-radius: 10px;
 
 	margin-top: 20px;
+}
+
+
+@media (max-width:800px){
+	.modalDialog div{
+		width: 70%;
+		
+	}
+}
+
+
+/*
+@media (max-width:500px){
+	.form_contact .placeholder{
+		width: 70%;
+		padding: 150px;
+	}
+}
+
+/*.form_contact {
+		padding: 150px;
+	}
+	
+}
+
+
+
+@media (max-width:500px){
+	.form_contact .{
+		padding: 50px;
+	}
+	
 }
