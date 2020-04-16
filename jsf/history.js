@@ -83,30 +83,38 @@ function addLocalStorage(SList){
     localStorage.setItem('Lista de Busquedas', JSON.stringify(SList));
 }
 
- //LocalStorage solo interpresa strings, se parsea con el JSON
- //localStorage.setItem("Search", JSON.stringify(search));
+//LocalStorage solo interpresa strings, se parsea con el JSON
+//localStorage.setItem("Search", JSON.stringify(search));
 
- //Recupero los elementos de la lista
- function get_localStorage(){
+//Recupero los elementos de la lista
+function get_localStorage(){
     var tendencias = document.getElementById('prueba-tendendencias');
     var listSearch = localStorage.getItem('Lista de Busquedas');
-     if ( listSearch == null ){
+    if ( listSearch == null ){
         tendencias.innerHTML = '<div class="in-flex">No busco nada recientemente</div>'
-     }
-     else{
+    }
+    else{
         searchList = JSON.parse(listSearch);
         var contenido = "";
+
         for( let i=0; i < searchList.length; i++ ){
-            
-        contenido += '<a id="elemento-sidebar" onclick="get_Value('+i+')"><span>'+ searchList[i].palabra_clave +'</span></a>'; 
+            if (searchList[i].palabra_clave.length < 20) {
+                contenido_palabra_clave = searchList[i].palabra_clave
+            }
+            else {
+                contenido_palabra_clave = '"' + searchList[i].palabra_clave.slice(0, 20) + '..."'
+            }
+            contenido += '<a id="elemento-sidebar" onclick="get_Value('+i+')"><span>' + contenido_palabra_clave + 
+                '<br>' + searchList[i].autor;
+            if (searchList[i].fecha != (null || '')) {
+                contenido += ' - ' + searchList[i].fecha;
+            }
+            contenido +='</span></a>';
+
+            tendencias.innerHTML = contenido;
         }
-        tendencias.innerHTML = contenido;
-
-     }
-
-
-
- }
+    }
+}
 
  //Retorno el valor del boton a los input
  function get_Value(index){

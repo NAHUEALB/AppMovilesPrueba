@@ -40,8 +40,18 @@
 	transition: all .5s ease;
 }
 
+#elemento-sidebar {
+	line-height: 32px;
+	font-size: 15px;
+	padding-left: 10px;
+}
 
 #elemento-sidebar:hover, #elemento-sidebar.active {
+	border-left: 5px solid #b93632;
+	color: #b93632;
+}
+
+#elemento-sidebar-grande:hover, #elemento-sidebar-grande.active {
 	border-left: 5px solid #b93632;
 	color: #b93632;
 }
