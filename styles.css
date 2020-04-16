@@ -140,6 +140,15 @@ textarea {
 	top:1px;
 }
 
+.boton-desactivado {
+	box-shadow:inset 0px -28px 5px -6px #777;
+	background-color:#555;
+}
+
+.boton-desactivado:hover {
+	background-color:#bbb;
+}
+
 #una-noticia {
 	margin: 15px 10px 10px 10px;
 	font-size: 13px;
