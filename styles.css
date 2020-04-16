@@ -98,7 +98,6 @@ textarea {
 	flex: 1;
 	min-width: 300px;
 	width: 85%;	
-	border-radius: 0px 0px 10px 10px;
 	text-align: center;
 }
 
@@ -129,6 +128,7 @@ textarea {
 	font-weight:normal;
 	padding:15px 50px;
 	text-shadow:0px 0px 0px #263666;
+	border-width: 0px;
 }
 
 .boton-cheto:hover {
@@ -158,6 +158,22 @@ textarea {
 #titulo-noticia {
 	font-size: 17px;
 	font-weight: bold;
+}
+
+#div-problema-busqueda {
+	width: 50%;
+	height: 100px;
+	background-color: rgba(130,255,255, 0.1);
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 100px;
+	margin-top: 20px;
+}
+
+#numerador-paginas {
+	line-height: 30px;
+	font-size: 24px;
+	padding: 0px 20px 0px 20px;
 }
 
 
