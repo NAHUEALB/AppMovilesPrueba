@@ -1,5 +1,4 @@
 <!-- KEY API NOTICIAS: 41145be57b964f11a90511f640fa2eec -->
-
 <!DOCTYPE html>
 <html>
 
@@ -13,17 +12,12 @@
     <script src="https://kit.fontawesome.com/f0c5136858.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="jsf/funciones.js"></script>
 	<script type="text/javascript" src="jsf/popup.js"></script>
-	<!-- JS con la gestion de LocalStorage-->
 	<script type="text/javascript" src="jsf/history.js"></script>
-
 </head>
-
-<!-- BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY -->	
 
 <body>	
 
-
-	<!-- HEADLINE, DONDE VA EL TÍTULO DE LA PÁGINA Y SU LOGO -->
+	<!-- cabecera con el título y el logo-->
 	<section>
 		<div class="cabecera">
 			<img src="media/icon_white.png" width="50" height="50">
@@ -31,96 +25,60 @@
 		</div>
 	</section>
 
-
-		<input type="checkbox" id="check">
-		<label for="check">
-			<i class="fas fa-bars" id="btn"></i>
-			<i class="fas fa-times" id="cancel"></i>
-		</label>
-
-		<div class="sidebar">
-			<header>MENU</header>
-			<a href="index.html" id="elemento-sidebar-grande"><i class="fas fa-search"></i><span>Buscar</span></a>
-			<a href="contacto.html" id="elemento-sidebar-grande"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
-			<header>ÚLTIMAS</header>
-			<div id="prueba-tendendencias">
-
-			</div>
-		</div>
+	<!-- sidebar con accesos rápidos e historial-->
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+	</label>
+	<div class="sidebar">
+		<header>MENÚ</header>
+		<a href="index.html" id="elemento-sidebar-grande"><i class="fas fa-search"></i><span>Buscar</span></a>
+		<a href="contacto.html" id="elemento-sidebar-grande"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
+		<header>HISTORIAL</header>
+		<div id="prueba-tendendencias"></div>
+	</div>
 	
-<center>
-	<form>
-		<div class="in-flex" class="cuerpo">
-			<input type="text" id="input-pc" placeholder="¿Qué desea buscar hoy?" required onclick="return false">
-			<input type="text" id="input-autor" placeholder="¿Algún autor en particular?">
-			<input type="date" id="input-date" > 
-		</div>
-		<button submit class="boton-cheto" type='button' id="btn-imprimir" onclick="apretarBoton()">Buscar noticias</button>
-	</form>
+	<center>
 
+		<!-- formulario de filtros de búsqueda-->
+		<form>
+			<div class="in-flex" class="cuerpo">
+				<input type="text" id="input-pc" placeholder="¿Qué desea buscar hoy?" required onclick="return false">
+				<input type="text" id="input-autor" placeholder="¿Algún autor en particular?">
+				<input type="date" id="input-date" > 
+			</div>
+			<button submit class="boton-cheto" type='button' id="btn-imprimir" onclick="apretarBoton()">Buscar noticias</button>
+		</form>
 
-
-
-<!-- Formulario de Comparte Información con un amigo-->
-<div id="openModal" class="modalDialog">	
-	<div class="in-flex" class="cuerpo">
-			<a href="#close" title="Close" class="close" onclick="CloseModal()">X</a>
-			<form action="enviarform.php" method="post" class="form_contact">
-				
+		<!-- formulario de Comparte Información con un amigo-->
+		<div id="openModal" class="modalDialog">	
+			<div class="in-flex" class="cuerpo">
+				<a href="#close" title="Close" class="close" onclick="CloseModal()">X</a>
+				<form action="enviarform.php" method="post" class="form_contact">
 					<a style="font-size: 30px">COMPARTIR</a>
 					<img src="media/email-icon.png" width="30" height="30">
-				
-					
 					<input type="text" id="input-nombre" placeholder="Nombre y Apellido" >
 					<input type="text" id="input-correo emisor" placeholder="Correo emisor">
 					<input type="text" id="input-correo recepetor" placeholder="Correo receptor" > 
 					<textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
 					<button submit class="boton-cheto" type="button" onclick="enviarModal()" >ENVIAR</button>
-
-
-					<!--
-					<label for="nombre" class="form-label">Nombre:</label>
-					<input type="text" name="nombreApellido" placeholder="Nombre y Apellido" required>
-
-					<label for="nombre" class="form-label">Correo Emisor:</label>
-					<input type="text" name="correo_emisor" placeholder="Correo emisor" required>
-
-					<label for="nombre" class="form-label">Correo Receptor:</label>
-					<input type="text" name="correo_receptor" placeholder="Correo receptor" required>
-
-					<label for="nombre" class="form-label">Mensaje:</label>
-					<textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-					<input type="submit" class="btn-submit" value="ENVIAR" id="boton-modal">
-					-->
 				</form>
-	</div>
-</div>	
+			</div>
+		</div>	
 
-	<!-- REGIÓN MEDIA, DONDE SE ENCUENTRA EL CONTENIDO DE LA PÁGINA -->
-	<div class="cuerpo" class="in-flex" id="div-para-imprimir">
-		
-	
-		<!-- PRIMER BLOQUE CON EL TEXTO DE EJEMPLO, ACÁ VAMOS A PONER EL CONTENIDO -->
+		<!-- región donde se imprimen las noticias -->
+		<div class="cuerpo" class="in-flex" id="div-para-imprimir"></div>
 
-
-
-		
-
-	</div>
-
-<!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->	
-	
-	<!--<footer>	
-		<div class="titulo-footer">Aplicaciones Móviles - 2020</div>
-		<div class="texto-footer">Alberti, Nahuel</div>
-		<div class="texto-footer">Delgado, Ariel</div>
-		<div class="texto-footer">Pereda, Gonzalo</div>
-		<div class="texto-footer">Sandobal, Nicolás</div>
-	</footer>-->
-
-
-</center>
-
+		<!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->	
+		<!--<footer>	
+			<div class="titulo-footer">Aplicaciones Móviles - 2020</div>
+			<div class="texto-footer">Alberti, Nahuel</div>
+			<div class="texto-footer">Delgado, Ariel</div>
+			<div class="texto-footer">Pereda, Gonzalo</div>
+			<div class="texto-footer">Sandobal, Nicolás</div>
+		</footer>-->
+	</center>
 
 </body>
 

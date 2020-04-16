@@ -52,7 +52,7 @@ body {
 
 .in-flex div {	
 	padding: 25px;
-	margin: 20px;
+	margin: 0px;
 } 
 .in-flex form{
 	/*opacity: 0.3;
@@ -289,8 +289,6 @@ textarea {
 	flex: 1;
 	min-width: 300px;
 	width: 100%;
-		
-
 }
 
 #div-contacto{
@@ -298,7 +296,6 @@ textarea {
 	text-align: center;
 	background-color: #fff;
 	border-radius: 10px;
-
 	margin-top: 20px;
 }
 
