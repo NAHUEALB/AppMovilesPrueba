@@ -3,52 +3,79 @@ var searchList = [];
 
 function save_localStorage(author,word,date){
 
-    
-    console.log(author,word,date);
     //Meto en la lista search los valores de author y word en la lista
     //Creo el elemento de la lista
-    var search = {
+    var ultima_busqueda = {
         palabra_clave: word,
         autor: author,
         fecha: date
     };
-    
-//Agregar condicion para saber si existe o no
 
-    //Lo gestiono tipo FILA
-    console.log(searchList.length);
-    
-    if( searchList.length == 5){
-        var iterar = searchList.length ;
-        var repitio = false;
-        console.log(repitio);
-        if(iterar > 5){
-            iterar = 5
+    var existe = false; 
+
+    if (searchList.length < 5) {
+        // si el historial todavía no está lleno
+        var i = 0;
+        while (i<searchList.length && existe == false) {
+            if ((searchList[i].palabra_clave == ultima_busqueda.palabra_clave) &&
+                (searchList[i].autor == ultima_busqueda.autor) &&
+                (searchList[i].fecha == ultima_busqueda.fecha)) {
+                existe = true;
+            }            
+            i++;
         }
-        for (i=0; i<4; i++){
-            if(JSON.stringify(search) == JSON.stringify(searchList[i]) || repitio){
-                searchList[i] = searchList[i+1];
-                
-                repitio = true;
-                console.log(repitio);
 
+        if (existe) {
+            // si ya existe, desde que se repite reemplazamos con las búsquedas más antiguas
+            for (j=i-1; j>0; j--) {
+                searchList[j] = searchList[j-1];
             }
-
+            searchList[0] = ultima_busqueda;
+            addLocalStorage(searchList);
+        } 
+        else {
+            // si la última búsqueda no existe en el historial, se agrega sin más
+            searchList.unshift(ultima_busqueda);
+            addLocalStorage(searchList);
         }
-        if(repitio == false){
-        //Elimino el primero en llegar
-        searchList.pop();
+    }
 
+    else {
+        // si son 5 o más en el historial, hay que desencolar por FIFO
+        var i = 0;
+        while (i<5 && existe == false) {
+            if ((searchList[i].palabra_clave == ultima_busqueda.palabra_clave) &&
+                (searchList[i].autor == ultima_busqueda.autor) &&
+                (searchList[i].fecha == ultima_busqueda.fecha)) {
+                existe = true;
+            }
+            i++;
         }
 
+        if (existe) {
+            // ya existe, desde que se repite reemplazamos con las búsquedas más antiguas
+            
+            for (j=i-1; j>0; j--) {
+                searchList[j] = searchList[j-1];
+            }
+            searchList[0] = ultima_busqueda;
+            addLocalStorage(searchList);
+        } 
+        else {
+           // la última búsqueda no existe en el historial, se agrega sin más
+            searchList.unshift(ultima_busqueda);
+            searchList.pop(); // pero también sacamos la primera en llegar
+            addLocalStorage(searchList);
+        }
     }
-    searchList.unshift(search);
-    addLocalStorage(searchList);
 
-    get_localStorage();       
+    get_localStorage();  
+}
 
-    
-    }
+
+
+
+
 
 //Agrego a localStorage la lista de busquedas
 function addLocalStorage(SList){
@@ -63,18 +90,15 @@ function addLocalStorage(SList){
  function get_localStorage(){
     var tendencias = document.getElementById('prueba-tendendencias');
     var listSearch = localStorage.getItem('Lista de Busquedas');
-    console.log(listSearch);
      if ( listSearch == null ){
         tendencias.innerHTML = '<div class="in-flex">No busco nada recientemente</div>'
      }
      else{
         searchList = JSON.parse(listSearch);
         var contenido = "";
-        console.log(searchList[0].fecha);
         for( let i=0; i < searchList.length; i++ ){
-            console.log(listSearch);
             
-        contenido += '<a id="elemento-sidebar" onclick="get_Value('+i+')"><span>'+ searchList[i].palabra_clave  +'<br>'+searchList[i].autor+'</span></a>'; 
+        contenido += '<a id="elemento-sidebar" onclick="get_Value('+i+')"><span>'+ searchList[i].palabra_clave +'</span></a>'; 
         }
         tendencias.innerHTML = contenido;
 
@@ -86,7 +110,6 @@ function addLocalStorage(SList){
 
  //Retorno el valor del boton a los input
  function get_Value(index){
-    console.log(index);
 
 
     document.getElementById('input-pc').value = searchList[index].palabra_clave;

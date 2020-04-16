@@ -39,8 +39,6 @@ function apretarBoton() {
 				// Creamos un vector de noticias filtradas por autor
 				var noticias_filtradas = [];
 				for (var n=0; n<noticias.length; n++){
-					console.log(noticias[n].author);
-					console.log(String(noticias[n].author));
 					if (autor != "" && ((String(noticias[n].author)).toLowerCase()).includes(autor.toLowerCase()) && fecha == "") {
 						noticias_filtradas.push(noticias[n]);
 					}
@@ -55,7 +53,6 @@ function apretarBoton() {
 				}
 				if (noticias_filtradas.length > 0) {
 					hubo_resultados = true;
-					console.log("hubo resultados con alguno o ambos filtros jejejeje");
 					for ( var n=0; n<noticias_filtradas.length; n++){			
 						lista_de_noticias += '<div class="in-flex" id="una-noticia">' +
 							'<br><img src="' + noticias[n].urlToImage + '" height="190" width="280"><hr />' +
@@ -71,13 +68,11 @@ function apretarBoton() {
 					}
 				}
 				else {
-					console.log("de tanto filtro dejamos cero");
 
 				}
 			}			
 			else {
 				hubo_resultados = true;
-				console.log("como no hubo filtros traemos todo");
 				for ( var n=0; n<noticias.length; n++){		
 					lista_de_noticias += '<div class="in-flex" id="una-noticia">' +
 						'<br><img src="' + noticias[n].urlToImage + '" height="160" width="280"><hr />' +
@@ -104,37 +99,3 @@ function apretarBoton() {
 function enviarModal() {
 	document.getElementById('openModal').style.display = 'block';
 }
-				
-
-							
-
-
-
-/* 
-		var res = response.json();
-		console.log(res);
-		document.getElementById("resultado").textContent = response;
-
-
-
-	fetch('https://www.hatchways.io/api/assessment/students')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    var divOut = document.getElementById('txtOut');
-    var allStudents = myJson.students;
-    var txtOut = "";
-    for (var k in allStudents) {
-      txtOut += `<b>${allStudents[k].firstName}</b><br />`;
-      txtOut += `email: ${allStudents[k].email}<br />`;
-      txtOut += `Company: ${allStudents[k].company}<br />`;
-      txtOut += `Skill: ${allStudents[k].skill}<br />`;
-      txtOut += `Average: ${allStudents[k].grades}<br />`;
-      txtOut += `<img src="${allStudents[k].pic}"><hr />`;
-    }
-    divOut.innerHTML = txtOut;
-  });
-	
-
-*/
