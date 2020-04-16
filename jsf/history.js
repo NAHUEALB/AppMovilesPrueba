@@ -104,7 +104,7 @@ function get_localStorage(){
             else {
                 contenido_palabra_clave = '"' + searchList[i].palabra_clave.slice(0, 20) + '..."'
             }
-            contenido += '<a id="elemento-sidebar" onclick="get_Value('+i+')"><span>' + contenido_palabra_clave + 
+            contenido += '<a href="#" id="elemento-sidebar" onclick="get_Value('+i+')"><span>' + contenido_palabra_clave + 
                 '<br>' + searchList[i].autor;
             if (searchList[i].fecha != (null || '')) {
                 contenido += ' - ' + searchList[i].fecha;
