@@ -99,3 +99,4 @@ function apretarBoton() {
 function enviarModal() {
 	document.getElementById('openModal').style.display = 'block';
 }
+
