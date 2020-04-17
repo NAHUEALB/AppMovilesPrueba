@@ -7,6 +7,7 @@
 
 body {
 	background-image: url("media/background_pattern.jpg");
+	padding-bottom: 100px;
 }
 
 .cabecera {
@@ -372,7 +373,6 @@ label #btn, label #cancel{
 	border: 1px solid #262626;
 	transition: all .5s ease;
 	top: 0px;
-
 }
 
 label #cancel {
@@ -395,7 +395,7 @@ label #cancel {
 #check:checked ~ .sidebar{
 	left: 0;
 }
-
+/*
 @media (max-width: 860px){
 	.sidebar{
 		height: auto;
@@ -423,25 +423,42 @@ label #cancel {
 		opacity: 1;
 		visibility: visible;
 	}
-} 
+} */
 
-/* -------FOOTER-------*/
+/* -------FOOTER NO ANDA UNA CHOTA-------*/
+/*footer{
+
+	margin-top: 0px;
+	padding-top: 0px;
+	overflow: visible;
+	width: 100%;
+	position: relative;
+	
+}
 .diseño-footer {
 	background: #1e1e1e;
 	color: #d3d3d3;
-	bottom: 0px;
-	position: fixed;
+
 	height: 100px;
 	width: 100%;
-	max-width: 500%;
-	padding-top: 20px;	
+	padding-top: 20px;
 }
 .footer-content {
-	padding-top: 20px;
+	padding-top: 0px;
 	display: flex;
 	height: 200px;
 	width: 25%;
-	bottom: 0px;
+	position: relative;
+}
+#elemento-logo {
+	color: white;
+	font-size: 30px;
+	line-height: 72px;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', sans-serif;
+	min-width: 150px;
+	padding-left: 40px;
+	margin: 0px 20px 0px 20px;
 }
 .diseño-footer .footer-bottom {
 	background: #343a40;
@@ -449,17 +466,37 @@ label #cancel {
 	height: 20px;
 	width: 100%;
 	text-align: center;
-	position: absolute;
+	position: fixed;
 	bottom: 0px;
 	left: 0px;
 	padding-top: 0px;
 }
-
-#elemento-logo {
-	color: white;
-	font-size: 30px;
-	line-height: 40px;
-	text-align: center;
-	font-family: 'Franklin Gothic Medium', sans-serif;
-
-}
+*/
+/* NO SIRVE CASI NADA 
+footer {
+	min-height: 70px;
+	background-color: #191919;
+	background-image: -moz-linear-gradient(top, #191919, #000000);
+	background-image: -o-linear-gradient(top, #191919, #000000);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #191919), color-stop(1, #000000));
+	background-image: -webkit-linear-gradient(#191919, #000000);
+	background-image: linear-gradient(top, #191919, #000000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#191919', endColorStr='#000000');
+	border-top: 1px solid rgba(50, 50, 50, 0.3);
+	width: 100%;
+	position: relative;
+	clear: both;
+	margin-top: 0px;
+	padding-top: 0px;
+	overflow: visible;
+  }
+  
+  .diseño-footer {
+	border-top: 1px solid #222;
+  }
+  
+  .footer-content {
+	width: 950px;
+	margin: 0 auto;
+  }
+*/
