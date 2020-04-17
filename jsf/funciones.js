@@ -191,3 +191,4 @@ function buscarNoticias() {
 function enviarModal() {
 	document.getElementById('openModal').style.display = 'block';
 }
+
