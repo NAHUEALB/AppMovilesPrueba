@@ -47,6 +47,7 @@ a:hover, a.active {
 .sidebar a i {
 	font-size: 23px;
 	margin-right: 16px;
+
 }
 
 .sidebar a span{
@@ -56,6 +57,7 @@ a:hover, a.active {
 
 #check {
 	display: none;
+	
 }
 
 label #btn, label #cancel{
@@ -69,7 +71,8 @@ label #btn, label #cancel{
 	color: white;
 	font-size: 29px;
 	border-radius: 5px;
-	margin: 15px 30px;
+	/*CAMBIAR EN EL MERGE*/
+	margin: 12px 5px;
 	border: 1px solid #262626;
 	transition: all .5s ease;
 	top: 0px;
@@ -97,8 +100,9 @@ label #cancel {
 	left: 0;
 }
 
-@media (max-width: 860px){
+/*@media (max-width: 860px){
 	.sidebar{
+		
 		height: auto;
 		width: 70px;
 		left: 0;
@@ -124,4 +128,4 @@ label #cancel {
 		opacity: 1;
 		visibility: visible;
 	}
-}
+}*/
