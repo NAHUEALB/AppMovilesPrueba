@@ -38,7 +38,7 @@ body {
 
 .in-flex {
 	flex: 1;
-	min-width: 300px;
+	min-width: 250px;
 	width: 85%;	
 	border-radius: 0px 0px 10px 10px;
 	text-align: center;
@@ -162,10 +162,6 @@ textarea {
     
 }
 
-
-
-
-
 /* Diseño del Modal */
 
 #boton-modal {
@@ -232,22 +228,37 @@ transition: opacity 400ms ease-in;
 }
 .close:hover { background: #00d9ff; }
 
-#map {
-	height: 350px;
-	padding: 0px;
-	margin: 0px;
-	flex: 1;
-	min-width: 300px;
-	width: 100%;
-		
-
-}
 
 #div-contacto{
-	min-width: 300px;
+	min-width: 250px;
 	text-align: center;
 	background-color: #fff;
 	border-radius: 10px;
 
 	margin-top: 20px;
 }
+
+#div-contacto-map{
+	min-width: 250px;
+	min-height: 325px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 200px;
+    overflow: hidden;
+	}
+
+    .google-maps iframe {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
