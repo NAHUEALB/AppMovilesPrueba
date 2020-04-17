@@ -7,8 +7,7 @@ var noticias_filtradas = [];
 
 function dibujarHtmlParaNoticias() {
 	var divParaNoticias = document.getElementById('div-para-imprimir');
-		divParaNoticias.innerHTML = '<div class="in-flex" id="div-resultado-busqueda">Se encontraron '+noticias_filtradas.length+' resultados</div>';
-
+		divParaNoticias.innerHTML = '<div style="background-color: rgba(50,255,50, 0.2);" id="div-resultado-busqueda">Se encontraron '+noticias_filtradas.length+' resultados</div>';
 	var htmlParaNoticias = "";
 	for (let i=(pag*10)-10; i<(pag*10); i++) {	
 		if (noticias_filtradas[i] != (null && undefined)) {	
@@ -151,6 +150,8 @@ function buscarNoticias() {
 					document.getElementById("boton-next").disabled = false;
 					(document.getElementById("boton-next")).classList.remove("boton-desactivado");
 				}
+				var divParaNoticias = document.getElementById('div-resultado-busqueda');
+				divParaNoticias.innerHTML = '<div style="background-color: rgba(50,255,50, 0.2);">Te traemos los mejores '+noticias_filtradas.length+' resultados</div>';
 			}
 			else { 
 				pag = 0; maxPags = 0; // volvemos a definirlas en cero por las dudas
@@ -158,7 +159,7 @@ function buscarNoticias() {
 				document.getElementById("div-resultado-busqueda").style.visibility = "visible";
 
 				var divParaNoticias = document.getElementById('div-resultado-busqueda');
-				divParaNoticias.innerHTML = '<div>La búsqueda no arrojó resultados</div>';
+				divParaNoticias.innerHTML = '<div style="background-color: rgba(255,200,50, 0.2);">La búsqueda no arrojó resultados</div>';
 				if (document.getElementById("boton-prev") != null) {
 					document.getElementById("boton-prev").style.visibility = "hidden";
 				}
@@ -177,7 +178,8 @@ function buscarNoticias() {
 		document.getElementById("div-resultado-busqueda").style.visibility = "visible";
 
 		var divParaNoticias = document.getElementById('div-resultado-busqueda');
-		divParaNoticias.innerHTML = '<div>Por favor ingrese algo a buscar</div>';
+		divParaNoticias.innerHTML = '<div style="background-color: rgba(255,50,50, 0.2);">Por favor ingrese algo a buscar</div>';
+
 		if (document.getElementById("boton-prev") != null) {
 			document.getElementById("boton-prev").style.visibility = "hidden";
 		}
