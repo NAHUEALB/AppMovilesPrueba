@@ -12,11 +12,22 @@
 	<script type="text/javascript" src="jsf/funciones.js"></script>
 	<script type="text/javascript" src="jsf/popup.js"></script>
 	<script type="text/javascript" src="jsf/history.js"></script>
+	<script type="text/javascript" src="jsf/sidebar.js"></script>
 </head>
 
-<body onload="get_localStorage()">	
+
+
+
+
+<nav></nav>
+
+<body onload="get_localStorage()" >	
+
+
+
 
 	<!-- cabecera con el título y el logo-->
+
 	<section>
 		<div class="cabecera">
 			<img src="media/icon_white.png" width="50" height="50">
@@ -24,21 +35,23 @@
 		</div>
 	</section>
 
-	<!-- sidebar con accesos rápidos e historial-->
-	<input type="checkbox" id="check">
-	<label for="check">
-		<i class="fas fa-bars" id="btn"></i>
-		<i class="fas fa-times" id="cancel"></i>
-	</label>
-	<div class="sidebar">
-		<header>MENÚ</header>
-		<a href="index.html" id="elemento-sidebar-grande"><i class="fas fa-search"></i><span>Buscar</span></a>
-		<a href="contacto.html" id="elemento-sidebar-grande"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
-		<header>HISTORIAL</header>
-		<div id="prueba-tendendencias"></div>
-	</div>
+			<!-- sidebar con accesos rápidos e historial-->
+
+			<input type="checkbox" id="check">
+			<label for="check">
+				<i class="fas fa-bars" id="btn"></i>
+				<i class="fas fa-times" id="cancel"></i>
+			</label>
+			<div class="sidebar" id="sidebar">
+				<header>MENÚ</header>
+				<a href="index.html" id="elemento-sidebar-grande"><i class="fas fa-search"></i><span>Buscar</span></a>
+				<a href="contacto.html" id="elemento-sidebar-grande"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
+				<header>HISTORIAL</header>
+				<div id="prueba-tendendencias"></div>
+			</div>
+
 	
-	<center>
+	<center onclick="ocultarSide(event)">
 
 		<!-- formulario de filtros de búsqueda-->
 		<form>
@@ -79,6 +92,7 @@
 			<div class="texto-footer">Pereda, Gonzalo</div>
 			<div class="texto-footer">Sandobal, Nicolás</div>
 		</footer>-->
+
 		
 	</center>
 
