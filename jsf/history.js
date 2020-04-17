@@ -1,7 +1,5 @@
 var searchList = [];
 
-
-
 function save_localStorage(author,word,date){
     console.log(localStorage.getItem("Lista de Busquedas"))
     //Meto en la lista search los valores de author y word en la lista
@@ -119,12 +117,7 @@ function get_localStorage(){
 
  //Retorno el valor del boton a los input
  function get_Value(index){
-
-
     document.getElementById('input-pc').value = searchList[index].palabra_clave;
     document.getElementById('input-autor').value = searchList[index].autor;
     document.getElementById('input-date').value = searchList[index].fecha;
-
-
-   // apretarBoton();
  }

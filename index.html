@@ -43,7 +43,7 @@
 		<!-- formulario de filtros de búsqueda-->
 		<form>
 			<div class="in-flex" class="cuerpo">
-				<input type="text" id="input-pc" placeholder="¿Qué desea buscar hoy?" required onclick="return false">
+				<input type="text" id="input-pc" placeholder="¿Qué buscamos hoy?" required onclick="return false">
 				<input type="text" id="input-autor" placeholder="¿Algún autor en particular?">
 				<input type="date" id="input-date" > 
 			</div>
@@ -66,10 +66,14 @@
 			</div>
 		</div>	
 
-		<!-- región donde se imprimen las noticias -->
-		<div class="cuerpo" class="in-flex" id="div-para-imprimir"></div>
 
+
+		<!-- región donde se imprimen las noticias -->
+		<div id="div-resultado-busqueda"></div>
+		<div class="cuerpo" class="in-flex" id="div-para-imprimir"></div>
 		<div id="div-para-botones-paginas"></div>
+
+
 
 		<!-- footer en el que podríamos incluir integrantes y apis usadas-->
 		<!--<footer>	
