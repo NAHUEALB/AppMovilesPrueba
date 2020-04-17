@@ -11,3 +11,9 @@ function showModal() {
   function ocultarPopup(){
     document.getElementById('openModal').style.display = 'none';
   }
+
+  function ocultarPopup(){
+    document.forms[0].submit();
+    alert("EMAIL ENVIADO");
+    document.getElementById('openModal').style.display = 'none';
+  }
