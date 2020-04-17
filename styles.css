@@ -112,10 +112,10 @@ textarea {
 	padding: 25px;
 	margin: 0px;
 } 
-.in-flex form{
-	/*opacity: 0.3;
-	background-color: #777; */
-}
+/*.in-flex form{
+	opacity: 0.3;
+	background-color: #777; 
+}*/
 
 .boton-cheto {
 	box-shadow:inset 0px -28px 5px -6px #35a;
