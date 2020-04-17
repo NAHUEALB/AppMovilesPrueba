@@ -8,7 +8,6 @@
     <link rel="icon" href="media/favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
     <script src="https://kit.fontawesome.com/f0c5136858.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="jsf/funciones.js"></script>
     <script type="text/javascript" src="jsf/popup.js"></script>
@@ -37,26 +36,25 @@
     </div>
     <div id="div-contacto-map" class="in-flex">
     </p>Para mas información puede acercarse a nuestras oficinas en la Catedral de La Plata.</p>
-         <div class="google-maps">
+         <div class="google-maps" >
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5368.287136872699!2d-57.956913581961004!3d-34.92319316550843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62dd769b9d7%3A0x8e5a62b28764b5ef!2sCatedral%20de%20La%20Plata!5e0!3m2!1ses!2sar!4v1587087233348!5m2!1ses!2sar"  width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
         </div>
     </div>
     </center>
 
-
-<!-- Sidebar-->
-<input type="checkbox" id="check">
-<label for="check">
-    <i class="fas fa-bars" id="btn"></i>
-    <i class="fas fa-times" id="cancel"></i>
-</label>
-
-<div class="sidebar">
-    <header>My menu</header>
-
-    <a href="index.html"><i class="fas fa-search"></i><span>Buscar</span></a>
-    <a href="contacto.html"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
-</div>
+	<!-- sidebar con accesos rápidos e historial-->
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+	</label>
+	<div class="sidebar">
+		<header>MENÚ</header>
+		<a href="index.html" id="elemento-sidebar-grande"><i class="fas fa-search"></i><span>Buscar</span></a>
+		<a href="contacto.html" id="elemento-sidebar-grande"><i class="fas fa-map-marker-alt"></i><span>Contacto</span></a>
+		<header>HISTORIAL</header>
+		<div id="prueba-tendendencias"></div>
+	</div>
 
 
 </body>

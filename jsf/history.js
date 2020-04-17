@@ -1,8 +1,9 @@
 var searchList = [];
 
 
-function save_localStorage(author,word,date){
 
+function save_localStorage(author,word,date){
+    console.log(localStorage.getItem("Lista de Busquedas"))
     //Meto en la lista search los valores de author y word en la lista
     //Creo el elemento de la lista
     var ultima_busqueda = {
