@@ -6,6 +6,9 @@ var articulos = [];
 var noticias_filtradas = [];
 
 function dibujarHtmlParaNoticias() {
+	var divParaNoticias = document.getElementById('div-para-imprimir');
+		divParaNoticias.innerHTML = '<div class="in-flex" id="div-resultado-busqueda">Se encontraron '+noticias_filtradas.length+' resultados</div>';
+
 	var htmlParaNoticias = "";
 	for (let i=(pag*10)-10; i<(pag*10); i++) {	
 		if (noticias_filtradas[i] != (null && undefined)) {	
@@ -23,9 +26,9 @@ function dibujarHtmlParaNoticias() {
 	}
 
 	var htmlParaBotones = '<button class="boton-cheto" type="button" id="boton-prev" onclick="paginaPrevia()">< Previa</button>' +
-		'<a id="numerador-paginas">' + pag + ' de ' + maxPags + '</a>' +
-		'<button class="boton-cheto" type="button" id="boton-next" onclick="paginaSiguiente()">Siguiente ></button>';
-		divParaBotones.innerHTML = htmlParaBotones;
+	'<a id="numerador-paginas">' + pag + ' de ' + maxPags + '</a>' +
+	'<button class="boton-cheto" type="button" id="boton-next" onclick="paginaSiguiente()">Siguiente ></button>';
+	divParaBotones.innerHTML = htmlParaBotones;
 }
 
 function paginaPrevia() {
@@ -77,8 +80,6 @@ function buscarNoticias() {
 
 	if (palabras_clave != "") { 
 		url += palabras_clave; 
-
-
 		if (fecha != "") {
 			var datenow = new Date();
 			var fecha_now = datenow.getFullYear() + "-" 
@@ -127,6 +128,8 @@ function buscarNoticias() {
 				pag = 1;
 				maxPags = Math.floor(noticias_filtradas.length/10);
 
+				document.getElementById("div-resultado-busqueda").style.visibility = "visible";
+
 				dibujarHtmlParaNoticias(); // función donde se imprimen todas las noticias obtenidas
 
 				document.getElementById("boton-prev").style.visibility = "visible";
@@ -150,11 +153,12 @@ function buscarNoticias() {
 				}
 			}
 			else { 
-
-				// MEJORAR EL ESTILO VISUAL DE ESTE DIV DE "NO RESULTADOS"
 				pag = 0; maxPags = 0; // volvemos a definirlas en cero por las dudas
-				var divParaNoticias = document.getElementById('div-para-imprimir');
-				divParaNoticias.innerHTML = '<div class="in-flex">La búsqueda no arrojó resultados</div>';
+
+				document.getElementById("div-resultado-busqueda").style.visibility = "visible";
+
+				var divParaNoticias = document.getElementById('div-resultado-busqueda');
+				divParaNoticias.innerHTML = '<div>La búsqueda no arrojó resultados</div>';
 				if (document.getElementById("boton-prev") != null) {
 					document.getElementById("boton-prev").style.visibility = "hidden";
 				}
@@ -162,23 +166,24 @@ function buscarNoticias() {
 					document.getElementById("boton-next").style.visibility = "hidden";
 				}
 			}
-
 			console.log(pag + " de " + maxPags + ", " + noticias_filtradas.length + " resultados.");
-
 		})
 	}
 	else {
 				
-			// MEJORAR EL ESTILO VISUAL DE ESTE DIV DE "NO RESULTADOS"
-			pag = 0; maxPags = 0; // volvemos a definirlas en cero por las dudas
-			var divParaNoticias = document.getElementById('div-para-imprimir');
-			divParaNoticias.innerHTML = '<div class="in-flex" id="div-problema-busqueda">Por favor ingrese algo a buscar</div>';
-			if (document.getElementById("boton-prev") != null) {
-				document.getElementById("boton-prev").style.visibility = "hidden";
-			}
-			if (document.getElementById("boton-next") != null) {
-				document.getElementById("boton-next").style.visibility = "hidden";
-			}
+		// MEJORAR EL ESTILO VISUAL DE ESTE DIV DE "NO RESULTADOS"
+		pag = 0; maxPags = 0; // volvemos a definirlas en cero por las dudas
+
+		document.getElementById("div-resultado-busqueda").style.visibility = "visible";
+
+		var divParaNoticias = document.getElementById('div-resultado-busqueda');
+		divParaNoticias.innerHTML = '<div>Por favor ingrese algo a buscar</div>';
+		if (document.getElementById("boton-prev") != null) {
+			document.getElementById("boton-prev").style.visibility = "hidden";
+		}
+		if (document.getElementById("boton-next") != null) {
+			document.getElementById("boton-next").style.visibility = "hidden";
+		}
 	}
 }
 
