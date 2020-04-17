@@ -96,7 +96,7 @@ textarea {
 
 .in-flex {
 	flex: 1;
-	min-width: 300px;
+	min-width: 250px;
 	width: 85%;	
 	border-radius: 0px 0px 10px 10px;
 	text-align: center;
@@ -112,10 +112,10 @@ textarea {
 	padding: 25px;
 	margin: 0px;
 } 
-.in-flex form{
-	/*opacity: 0.3;
-	background-color: #777; */
-}
+/*.in-flex form{
+	opacity: 0.3;
+	background-color: #777; 
+}*/
 
 .boton-cheto {
 	box-shadow:inset 0px -28px 5px -6px #35a;
@@ -273,17 +273,9 @@ textarea {
 
 /* ---------- Styles del mapa ---------- */
 
-#map {
-	height: 350px;
-	padding: 0px;
-	margin: 0px;
-	flex: 1;
-	min-width: 300px;
-	width: 100%;
-}
 
 #div-contacto{
-	min-width: 300px;
+	min-width: 250px;
 	text-align: center;
 	background-color: #fff;
 	border-radius: 10px;
@@ -377,7 +369,7 @@ label #btn, label #cancel{
 	color: white;
 	font-size: 29px;
 	border-radius: 5px;
-	margin: 15px 30px;
+	margin: 12px 5px;
 	border: 1px solid #262626;
 	transition: all .5s ease;
 	top: 0px;
@@ -405,7 +397,7 @@ label #cancel {
 	left: 0;
 }
 
-@media (max-width: 860px){
+/* @media (max-width: 860px){
 	.sidebar{
 		height: auto;
 		width: 70px;
@@ -432,4 +424,28 @@ label #cancel {
 		opacity: 1;
 		visibility: visible;
 	}
-} 
+} */
+#div-contacto-map{
+	min-width: 250px;
+	min-height: 325px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 200px;
+    overflow: hidden;
+	}
+
+    .google-maps iframe {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
