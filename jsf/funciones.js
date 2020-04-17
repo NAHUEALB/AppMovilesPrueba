@@ -188,7 +188,9 @@ function buscarNoticias() {
 	})
 }
 
-function enviarModal() {
-	document.getElementById('openModal').style.display = 'block';
-}
+
+
+//function ocultar() {
+//	document.getElementById('openModal').style.visibility = 'hidden';
+//}
 

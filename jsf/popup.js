@@ -7,3 +7,7 @@ function showModal() {
   function CloseModal() {
     document.getElementById('openModal').style.display = 'none';
   }
+
+  function ocultarPopup(){
+    document.getElementById('openModal').style.display = 'none';
+  }
