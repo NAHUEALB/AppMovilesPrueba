@@ -6,7 +6,6 @@
 }
  body {
 	background-image: url("media/background_pattern.jpg");
-	padding-bottom: 100px;
 }
 
 .cabecera {
@@ -75,7 +74,7 @@ input, textarea {
     border: 1px solid grey;
 	border-radius: 10px;
 	width: 85%;
-	min-width: 250px;
+	min-width: 260px;
 	max-width: 367px;
 }
 
@@ -95,7 +94,7 @@ textarea {
 
 .in-flex {
 	flex: 1;
-	min-width: 300px;
+	min-width: 260px;
 	width: 85%;	
 	border-radius: 0px 0px 10px 10px;
 	text-align: center;
@@ -108,7 +107,7 @@ textarea {
 } 
 
 .in-flex div {	
-	padding: 25px;
+	padding: 5px;
 	margin: 0px;
 } 
 /*.in-flex form{
@@ -268,12 +267,12 @@ textarea {
 	padding: 0px;
 	margin: 0px;
 	flex: 1;
-	min-width: 300px;
+	min-width: 260px;
 	width: 100%;
 }
 
 #div-contacto{
-	min-width: 300px;
+	min-width: 260px;
 	text-align: center;
 	background-color: #fff;
 	border-radius: 10px;
@@ -367,7 +366,7 @@ label #btn, label #cancel{
 	color: white;
 	font-size: 29px;
 	border-radius: 5px;
-	margin: 15px 30px;
+	margin: 12px 5px;
 	border: 1px solid #262626;
 	transition: all .5s ease;
 	top: 0px;
@@ -425,21 +424,13 @@ label #cancel {
 
 /* -------FOOTER NO ANDA ------*/
 
-.footer {
-	background: #1e1e1e;
-	color: #d3d3d3;
-	position: relative;
-	width: 100%;
-	text-align: center;
-	margin-top: 0px;
-	padding: 0px;
-	bottom: 0px;
-}
+/*
 
 .footer-content {
 	height: 100px;
 	display: flex;
-
+	width: 100%;
+	max-width: 500px;
 }
 
 .footer-bottom {
@@ -456,4 +447,27 @@ label #cancel {
 	font-family: 'Franklin Gothic Medium', sans-serif;
 	margin: 0px 50px 0px 50px;
 	padding-top: 2px;
+}*/
+
+footer{
+    width: 100%;
+    background: #202020;
+	color: white;
+	line-height: 35px;
 }
+#elemento-footer {
+	padding: 0px;
+	min-width: 100px;
+}
+
+#fotito{
+	height: 10%;
+	width: 10%;
+	max-width: 72px;
+	max-height: 72px;
+	min-width: 18px;
+	min-height: 18px;
+}
+
+
+
