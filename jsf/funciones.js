@@ -191,9 +191,15 @@ function buscarNoticias() {
 	}
 }
 
-
-
-//function ocultar() {
-//	document.getElementById('openModal').style.visibility = 'hidden';
-//}
+function elegirPregunta() {
+	let randomquestion = Math.floor((Math.random() * 5) + 1);
+	let plh = "";
+	switch (randomquestion) {
+		case 1: plh = "¿Qué buscamos hoy?"; document.getElementById("input-pc").placeholder = plh; break;
+		case 2: plh = "Buscá y te plantamos un árbol"; document.getElementById("input-pc").placeholder = plh; break;
+		case 3: plh = "¿Con qué me vendrás hoy?"; document.getElementById("input-pc").placeholder = plh; break;
+		case 4: plh = "¿En qué puedo ayudarte?"; document.getElementById("input-pc").placeholder = plh; break;
+		case 5: plh = "¿Qué querés encontrar?"; document.getElementById("input-pc").placeholder = plh; break;
+	}
+}
 
