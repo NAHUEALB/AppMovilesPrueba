@@ -294,25 +294,6 @@ textarea {
 }
 
 
-/* ---------- Styles del mapa ---------- */
-
-
-#div-contacto{
-	min-width: 260px;
-	text-align: center;
-	background-color: #fff;
-	border-radius: 10px;
-	margin-top: 20px;
-}
-
-@media (max-width:800px){
-	.modalDialog div{
-		width: 70%;
-		
-	}
-}
-
-
 /* ---------- Styles de la sidebar ---------- */
 
 .sidebar {
@@ -447,6 +428,24 @@ label #cancel {
 		visibility: visible;
 	}
 } */
+
+/* ---------- Styles del mapa ---------- */
+
+
+#div-contacto{
+	min-width: 260px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+@media (max-width:800px){
+	.modalDialog div{
+		width: 70%;
+		
+	}
+}
 #div-contacto-map{
 	min-width: 250px;
 	min-height: 325px;
@@ -492,5 +491,10 @@ footer{
 	min-height: 18px;
 }
 
+/*Le pongo a la cabecera los enlaces y que no cambien de color*/
+.enlace-cabecera{
+	font-size: 40px;
+	color:white;
+}
 
 
