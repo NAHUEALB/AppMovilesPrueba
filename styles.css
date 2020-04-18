@@ -4,23 +4,28 @@
 	font-family: Segoe UI, Calibri, Verdana, Tahoma;
 	text-decoration: none;
 }
- body {
-	background-image: url("media/background_pattern.jpg");
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #eee;
 }
 
 .cabecera {
-	padding: 0px;
+	margin-bottom: 13%;
 	display: flex;
 	justify-content: center;
    	align-items: center;
-   	line-height: 70px;
+   	line-height: 80px;
    	width: 100%;
-	background-color: #47f;	
+	background-color: rgba(0, 0, 0, 0.84);	
 	color: #fff;
-	opacity: 0.8;
+	opacity: 1;
 	font-size: 32px;
 	font-weight: bold;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,1);
+	box-shadow: 0 10px 20px 10px rgba(0,0,0,0.5);
 }
 
 /* ----- Styles del form de búsqueda (genérico) ----- */
@@ -53,11 +58,35 @@ input, textarea {
     box-sizing: border-box;
     font-size: 17px;
     border: none;
-    border: 1px solid grey;
+    border: 0px solid grey;
 	border-radius: 10px;
 	width: 85%;
 	min-width: 260px;
-	max-width: 367px;
+	max-width: 400px;
+}
+
+#input-pc {
+	height: 100px;
+	width: 100%;
+	max-width: 80%;
+	border: 0px;
+	border-radius: 100%;
+	text-align: center;
+	font-size: 24px;
+}
+
+input:focus {
+	box-shadow: 0 0 20px 0 rgba(51, 102, 255,0.3);
+	outline: none;
+	transition: box-shadow 200ms ease-in;
+}
+
+#input-autor {
+
+}
+
+#input-fecha {
+	max-width: 100px; 
 }
 
 textarea {
@@ -109,6 +138,7 @@ textarea {
 
 .boton-cheto:hover {
 	background-color:#0688fa;
+	transition: background-color 200ms ease-in;
 }
 
 .boton-cheto:active {
@@ -128,7 +158,7 @@ textarea {
 #una-noticia {
 	margin: 15px 10px 10px 10px;
 	font-size: 13px;
-	background-color: #ddf;
+	background-color: #f7f7f7;
 }
 
 #titulo-noticia {
@@ -138,12 +168,12 @@ textarea {
 
 #div-resultado-busqueda {
 	width: 100%;
-	height: 70px;
+	height: 120px;
 	font-size: 17px;
-	font-weight: bold;
-	line-height: 70px;
+	font-weight: italic;
+	line-height: 120px;
 	visibility: hidden;
-	margin-top: 10px;
+	margin-top: 30px;
 }
 
 #numerador-paginas {

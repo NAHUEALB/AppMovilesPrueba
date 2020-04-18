@@ -28,6 +28,8 @@ function dibujarHtmlParaNoticias() {
 	'<a id="numerador-paginas">' + pag + ' de ' + maxPags + '</a>' +
 	'<button class="boton-cheto" type="button" id="boton-next" onclick="paginaSiguiente()">Siguiente ></button>';
 	divParaBotones.innerHTML = htmlParaBotones;
+	document.location.href = '#div-resultado-busqueda';
+
 }
 
 function paginaPrevia() {

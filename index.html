@@ -1,4 +1,4 @@
-<!-- KEY API NOTICIAS: 41145be57b964f11a90511f640fa2eec -->
+<!--Api key news api: 41145be57b964f11a90511f640fa2eec -->
 <!DOCTYPE html>
 <html>
 
@@ -39,67 +39,59 @@
 	</div>
 	
 	<center>
-
-		<!-- formulario de filtros de búsqueda-->
-		<form>
-			<div class="in-flex" class="cuerpo">
-				<input type="text" id="input-pc" placeholder="¿Qué buscamos hoy?" required onclick="return false">
-				<input type="text" id="input-autor" placeholder="¿Algún autor en particular?">
-				<input type="date" id="input-date" > 
-			</div>
-			<button submit class="boton-cheto" type='button' id="btn-imprimir" onclick="buscarNoticias()">Buscar noticias</button>
-		</form>
-
-		<!-- formulario de Comparte Información con un amigo-->
-		<div id="openModal" class="modalDialog">	
-			<div class="in-flex" class="cuerpo">
-				<a href="#close" title="Close" class="close" onclick="CloseModal()">X</a>
-				<form action="enviarform.php" method="post" class="form_contact">
-					<a style="font-size: 30px">COMPARTIR</a>
-					<img src="media/email-icon.png" width="30" height="30">
-					<input type="text" id="input-nombre" placeholder="Nombre y Apellido" >
-					<input type="text" id="input-correo emisor" placeholder="Correo emisor">
-					<input type="text" id="input-correo recepetor" placeholder="Correo receptor" > 
-					<textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-					<button submit class="boton-cheto" type="button" onclick="ocultarPopup()">ENVIAR</button>
-				</form>
-			</div>
-		</div>	
-
-
-
-		<!-- región donde se imprimen las noticias -->
-		<div id="div-resultado-busqueda"></div>
-		<div class="cuerpo" class="in-flex" id="div-para-imprimir"></div>
-		<div id="div-para-botones-paginas"></div>
-
-		
-	</center>
-		<div class="cuerpo" class="in-flex" id="div-para-imprimir">
-		
+	<!-- formulario de filtros de búsqueda-->
+	<form onsubmit="return false">
+		<input type="text" id="input-pc" placeholder="¿Qué buscamos hoy?" required autofocus hidefocus="true" onclick="return false">
+		<div style="text-align: center; font-size: 14px;">Añade filtros opcionales a tu búsqueda</div>
+		<div class="in-flex" class="cuerpo">
+			<input type="text" id="input-autor" style="text-align: center;" placeholder="¿Algún autor en particular?">
+			<input type="date" id="input-date" style="text-align: center;">
 		</div>
+		<button submit type="submit" class="boton-cheto" href="#" id="btn-imprimir" onclick="buscarNoticias()">Buscar noticias</button>
+	</form>
+
+	<!-- formulario de Comparte Información con un amigo-->
+	<div id="openModal" class="modalDialog">	
+		<div class="in-flex" class="cuerpo">
+			<a href="#close" title="Close" class="close" onclick="CloseModal()">X</a>
+			<form action="enviarform.php" method="post" class="form_contact">
+				<a style="font-size: 30px">COMPARTIR</a>
+				<img src="media/email-icon.png" width="30" height="30">
+				<input type="text" id="input-nombre" placeholder="Nombre y Apellido" >
+				<input type="text" id="input-correo emisor" placeholder="Correo emisor">
+				<input type="text" id="input-correo recepetor" placeholder="Correo receptor" > 
+				<textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+				<button submit class="boton-cheto" type="button" onclick="ocultarPopup()">ENVIAR</button>
+			</form>
+		</div>
+	</div>	
+
+	<!-- región donde se imprimen las noticias -->
+	<div id="div-resultado-busqueda"></div>
+	<div class="cuerpo" class="in-flex" id="div-para-imprimir"></div>
+	<div id="div-para-botones-paginas"></div>
 	</center>
+
+	<div class="cuerpo" class="in-flex" id="div-para-imprimir"></div>
 	
 	<footer>
 		<center>
-			<div class="in-flex" >
-				<center>
-				<div class="in-flex">Web desarrollada para App Móviles</div>
-				<div class="in-flex">
-					<div id="elemento-footer">
-						<img src="media/Pictures/ph_albe.png" id="fotito">
-						<img src="media/Pictures/ph_delg.png" id="fotito">
-					</div>
-					<div id="elemento-footer">
-						<img src="media/Pictures/ph_pere.png" id="fotito">
-						<img src="media/Pictures/ph_sand.png" id="fotito">
-					</div>
+		<div class="in-flex" >
+			<center>
+			<div class="in-flex">Web desarrollada para App Móviles</div>
+			<div class="in-flex">
+				<div id="elemento-footer">
+					<img src="media/Pictures/ph_albe.png" id="fotito">
+					<img src="media/Pictures/ph_delg.png" id="fotito">
 				</div>
-				</center>
+				<div id="elemento-footer">
+					<img src="media/Pictures/ph_pere.png" id="fotito">
+					<img src="media/Pictures/ph_sand.png" id="fotito">
+				</div>
 			</div>
-			 
+			</center>
+		</div>
 		</center>
-
 	</footer>
 	
 
