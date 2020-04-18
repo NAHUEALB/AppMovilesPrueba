@@ -296,14 +296,6 @@ textarea {
 
 /* ---------- Styles del mapa ---------- */
 
-#map {
-	height: 350px;
-	padding: 0px;
-	margin: 0px;
-	flex: 1;
-	min-width: 260px;
-	width: 100%;
-}
 
 #div-contacto{
 	min-width: 260px;
