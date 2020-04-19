@@ -199,8 +199,8 @@ function elegirPregunta() {
 	let plh = "";
 	switch (randomquestion) {
 		case 1: plh = "¿Qué buscamos hoy?"; document.getElementById("input-pc").placeholder = plh; break;
-		case 2: plh = "Buscá y te plantamos un árbol"; document.getElementById("input-pc").placeholder = plh; break;
-		case 3: plh = "¿Con qué me vendrás hoy?"; document.getElementById("input-pc").placeholder = plh; break;
+		case 2: plh = "Quien busca encuentra"; document.getElementById("input-pc").placeholder = plh; break;
+		case 3: plh = "¿Con qué vendrás hoy?"; document.getElementById("input-pc").placeholder = plh; break;
 		case 4: plh = "¿En qué puedo ayudarte?"; document.getElementById("input-pc").placeholder = plh; break;
 		case 5: plh = "¿Qué querés encontrar?"; document.getElementById("input-pc").placeholder = plh; break;
 	}
