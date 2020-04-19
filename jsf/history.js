@@ -90,12 +90,12 @@ function get_localStorage(){
     var tendencias = document.getElementById('prueba-tendendencias');
     var listSearch = localStorage.getItem('Lista de Busquedas');
     if ( listSearch == null ){
-        tendencias.innerHTML = '<div class="in-flex">No busco nada recientemente</div>'
+        document.getElementById('sideHistory').style.visibility = 'hidden';
     }
     else{
         searchList = JSON.parse(listSearch);
         var contenido = "";
-
+        document.getElementById('sideHistory').style.visibility = 'visible';
         for( let i=0; i < searchList.length; i++ ){
             if (searchList[i].palabra_clave.length < 20) {
                 contenido_palabra_clave = searchList[i].palabra_clave

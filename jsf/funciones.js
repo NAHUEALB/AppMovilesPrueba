@@ -17,7 +17,7 @@ function dibujarHtmlParaNoticias() {
 			'<br><a id="una-noticia">Autor: ' + noticias_filtradas[i].author + '</a>' +
 			'<br><a id="una-noticia">Fecha de publicación: ' + (noticias_filtradas[i].publishedAt).slice(0, 10) + '</a>' +
 			'<br><a id="una-noticia" href=' + noticias_filtradas[i].url + ' target="_blank">Link a la noticia</a>' + 
-			'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup" onclick="showModal()">Compartir</button>' +
+			'<br><button class="boton-cheto" class="btn-abrir-popup" type="button" id="btn-abrir-popup" onclick="showModal('+i+')">Compartir</button>' +
 			'</div>';
 			divParaNoticias = document.getElementById('div-para-imprimir');
 			divParaNoticias.innerHTML = htmlParaNoticias; // dibujar html
@@ -206,3 +206,30 @@ function elegirPregunta() {
 	}
 }
 
+
+//FUNCIONES DEL MODAL
+
+function showModal(index) {
+	//Modifica el css el estado display de ModalDialog
+	document.getElementById('openModal').style.display = 'block';
+	//Tomando la url de la noticia compartida
+	let url = noticias_filtradas[index].url;
+	console.log(url);
+
+    document.getElementById('mensaje').innerHTML= 'Un amigo quiere que veas esta noticia: '+url;
+
+  }
+  
+  function CloseModal() {
+    document.getElementById('openModal').style.display = 'none';
+  }
+
+  function ocultarPopup(){
+    let ICE = document.getElementById('input-correo-emisor').value;
+    let ICR = document.getElementById('input-correo-receptor').value;
+
+    if ( ICE != "" && ICR !=""){
+      alert("EMAIL ENVIADO");
+      document.getElementById('openModal').style.display = 'none';
+    }
+  }
