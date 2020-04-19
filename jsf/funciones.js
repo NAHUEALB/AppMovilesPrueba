@@ -82,7 +82,9 @@ function buscarNoticias() {
 	if (palabras_clave != "") { 
 		url += palabras_clave; 
 		if (fecha != "") {
-			var datenow = new Date();
+
+			//Formateado yyyy-mm-dd asi lo entiende la api
+			var datenow = new Date(); //Fecha del sistema
 			var fecha_now = datenow.getFullYear() + "-" 
 			if (datenow.getMonth() < 10) { fecha_now += "0"; } 
 			fecha_now += ((datenow.getMonth()) + 1) + "-";
@@ -93,6 +95,7 @@ function buscarNoticias() {
 		}
 		
 		url += '&pageSize=100&language=es&apiKey=41145be57b964f11a90511f640fa2eec';
+		console.log(url);
 		
 		var pedidoApi = new Request(url);
 		fetch(pedidoApi)
@@ -104,7 +107,7 @@ function buscarNoticias() {
 			articulos = resultadoBusqueda.articles;
 
 			if (articulos.length > 0) {
-				if ((autor != ("" && null)) || fecha != "") {
+				if (autor != ("" && null)) {
 					// inicializamos las noticias filtradas por último por autor
 					noticias_filtradas = [];
 					for (var n=0; n<articulos.length; n++){

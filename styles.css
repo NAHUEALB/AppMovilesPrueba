@@ -486,3 +486,9 @@ footer{
 	min-width: 18px;
 	min-height: 18px;
 }
+
+/*Le pongo a la cabecera los enlaces y que no cambien de color*/
+.enlace-cabecera{
+	font-size: 40px;
+	color:white;
+}
