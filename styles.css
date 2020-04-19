@@ -82,10 +82,6 @@ input:focus {
 	transition: box-shadow 200ms ease-in;
 }
 
-#input-autor {
-
-}
-
 #input-fecha {
 	max-width: 100px; 
 }
@@ -490,4 +486,3 @@ footer{
 	min-width: 18px;
 	min-height: 18px;
 }
-
