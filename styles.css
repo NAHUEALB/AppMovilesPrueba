@@ -14,7 +14,6 @@ body {
 }
 
 .cabecera {
-	margin-bottom: 13%;
 	display: flex;
 	justify-content: center;
    	align-items: center;
@@ -74,6 +73,7 @@ input, textarea {
 	text-align: center;
 	font-size: 24px;
 	font-style: italic;
+	margin-top: 13%;
 }
 
 input:focus {
@@ -459,8 +459,7 @@ label #cancel {
 .google-maps {
     position: relative;
     padding-bottom: 75%;
-    height: 200px;
-    overflow: hidden;
+    height: 300px;
 }
 
 .google-maps iframe {
@@ -491,6 +490,4 @@ footer{
 	min-width: 18px;
 	min-height: 18px;
 }
-
-
 
