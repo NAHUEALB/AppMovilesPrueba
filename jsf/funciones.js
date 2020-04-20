@@ -24,9 +24,9 @@ function dibujarHtmlParaNoticias() {
 		}
 	}
 
-	var htmlParaBotones = '<button class="boton-cheto" type="button" id="boton-prev" onclick="paginaPrevia()">< Previa</button>' +
+	var htmlParaBotones = '<button class="boton-cheto" type="button" id="boton-prev" onclick="paginaPrevia()"> < </button>' +
 	'<a id="numerador-paginas">' + pag + ' de ' + maxPags + '</a>' +
-	'<button class="boton-cheto" type="button" id="boton-next" onclick="paginaSiguiente()">Siguiente ></button>';
+	'<button class="boton-cheto" type="button" id="boton-next" onclick="paginaSiguiente()"> > </button>';
 	divParaBotones.innerHTML = htmlParaBotones;
 	document.location.href = '#div-resultado-busqueda';
 
@@ -131,6 +131,9 @@ function buscarNoticias() {
 			if (hubo_resultados) {
 				pag = 1;
 				maxPags = Math.floor(noticias_filtradas.length/10);
+				if (maxPags == 0) {
+					maxPags = 1;
+				}
 
 				document.getElementById("div-resultado-busqueda").style.visibility = "visible";
 
@@ -227,7 +230,7 @@ function showModal(index) {
     let ICE = document.getElementById('input-correo-emisor').value;
     let ICR = document.getElementById('input-correo-receptor').value;
 
-    if ( ICE != "" && ICR !=""){
+    if ( ICE.includes("@") && ICR.includes("@")){
       alert("EMAIL ENVIADO");
       document.getElementById('openModal').style.display = 'none';
     }
