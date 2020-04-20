@@ -214,7 +214,6 @@ function showModal(index) {
 	document.getElementById('openModal').style.display = 'block';
 	//Tomando la url de la noticia compartida
 	let url = noticias_filtradas[index].url;
-	console.log(url);
 
     document.getElementById('mensaje').innerHTML= 'Un amigo quiere que veas esta noticia: '+url;
 
