@@ -1,4 +1,0 @@
-Actualicé el master con un boceto de lo que podemos usar para la web de las noticias o, si les interesa, que lo usen para practicar y romper y entender las etiquetas, el responsive y el CSS.
-
-Estoy intentando patear la base de datos del coronavirus con la API de https://about-corona.net/documentation.
-
